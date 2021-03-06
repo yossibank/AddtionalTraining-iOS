@@ -1,0 +1,28 @@
+PODS:
+  - KeychainAccess (4.2.2)
+  - Nuke (9.3.0)
+  - R.swift (5.4.0):
+    - R.swift.Library (~> 5.3.0)
+  - R.swift.Library (5.3.0)
+
+DEPENDENCIES:
+  - KeychainAccess
+  - Nuke
+  - R.swift
+
+SPEC REPOS:
+  trunk:
+    - KeychainAccess
+    - Nuke
+    - R.swift
+    - R.swift.Library
+
+SPEC CHECKSUMS:
+  KeychainAccess: c0c4f7f38f6fc7bbe58f5702e25f7bd2f65abf51
+  Nuke: 56a7266398951d9af3a897a71a7b662344915ec5
+  R.swift: c533450b0f7dc494e0993f5f1a1db925d84c3006
+  R.swift.Library: 0fc583cb55a99e28901299cc451614cad1161962
+
+PODFILE CHECKSUM: fab82497f7c58b438da36c0622c3fb9836e70506
+
+COCOAPODS: 1.10.1

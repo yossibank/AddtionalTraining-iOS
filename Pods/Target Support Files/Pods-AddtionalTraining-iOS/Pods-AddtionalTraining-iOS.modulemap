@@ -1,0 +1,6 @@
+framework module Pods_AddtionalTraining_iOS {
+  umbrella header "Pods-AddtionalTraining-iOS-umbrella.h"
+
+  export *
+  module * { export * }
+}
