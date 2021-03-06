@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -17,6 +17,7 @@
 		78BCFD7B25F31565003618CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78BCFD7925F31565003618CE /* LaunchScreen.storyboard */; };
 		78BCFD8625F31565003618CE /* AddtionalTraining_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BCFD8525F31565003618CE /* AddtionalTraining_iOSTests.swift */; };
 		78BCFD9125F31565003618CE /* AddtionalTraining_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BCFD9025F31565003618CE /* AddtionalTraining_iOSUITests.swift */; };
+		78BCFDB625F3AD02003618CE /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BCFDB525F3AD02003618CE /* R.generated.swift */; };
 		E5866B6B2653C75D62E8C96C /* Pods_AddtionalTraining_iOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8D6F460DE612176B198DE4F /* Pods_AddtionalTraining_iOSTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +58,7 @@
 		78BCFD8C25F31565003618CE /* AddtionalTraining-iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AddtionalTraining-iOSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		78BCFD9025F31565003618CE /* AddtionalTraining_iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddtionalTraining_iOSUITests.swift; sourceTree = "<group>"; };
 		78BCFD9225F31565003618CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		78BCFDB525F3AD02003618CE /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		8ADB37B08036EEA09D1F5DF6 /* Pods-AddtionalTraining-iOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AddtionalTraining-iOSTests.debug.xcconfig"; path = "Target Support Files/Pods-AddtionalTraining-iOSTests/Pods-AddtionalTraining-iOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A8D6F460DE612176B198DE4F /* Pods_AddtionalTraining_iOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AddtionalTraining_iOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAD0A3DCB6D501ED41DADAF9 /* Pods-AddtionalTraining-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AddtionalTraining-iOS.debug.xcconfig"; path = "Target Support Files/Pods-AddtionalTraining-iOS/Pods-AddtionalTraining-iOS.debug.xcconfig"; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 		78BCFD6D25F31562003618CE /* AddtionalTraining-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				78BCFDB525F3AD02003618CE /* R.generated.swift */,
 				78BCFD6E25F31562003618CE /* AppDelegate.swift */,
 				78BCFD7025F31562003618CE /* SceneDelegate.swift */,
 				78BCFD7225F31562003618CE /* ViewController.swift */,
@@ -165,7 +168,6 @@
 				8ADB37B08036EEA09D1F5DF6 /* Pods-AddtionalTraining-iOSTests.debug.xcconfig */,
 				20F7710D88E6F903FEFEC432 /* Pods-AddtionalTraining-iOSTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -177,6 +179,7 @@
 			buildConfigurationList = 78BCFD9525F31565003618CE /* Build configuration list for PBXNativeTarget "AddtionalTraining-iOS" */;
 			buildPhases = (
 				F4CD9DD67D3D761E162FD31C /* [CP] Check Pods Manifest.lock */,
+				78BCFDB125F3AC9C003618CE /* RSwift */,
 				78BCFD6725F31562003618CE /* Sources */,
 				78BCFD6825F31562003618CE /* Frameworks */,
 				78BCFD6925F31562003618CE /* Resources */,
@@ -277,8 +280,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				78BCFD7B25F31565003618CE /* LaunchScreen.storyboard in Resources */,
 				78BCFD7825F31565003618CE /* Assets.xcassets in Resources */,
+				78BCFD7B25F31565003618CE /* LaunchScreen.storyboard in Resources */,
 				78BCFD7625F31562003618CE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -316,6 +319,26 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AddtionalTraining-iOS/Pods-AddtionalTraining-iOS-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		78BCFDB125F3AC9C003618CE /* RSwift */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$TEMP_DIR/rswift-lastrun",
+			);
+			name = RSwift;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				$SRCROOT/R.generated.swift,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R.generated.swift\"\n";
 		};
 		BCDA5600A9911D9504614162 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -407,9 +430,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				78BCFD7325F31562003618CE /* ViewController.swift in Sources */,
+				78BCFDB625F3AD02003618CE /* R.generated.swift in Sources */,
 				78BCFD6F25F31562003618CE /* AppDelegate.swift in Sources */,
 				78BCFD7125F31562003618CE /* SceneDelegate.swift in Sources */,
+				78BCFD7325F31562003618CE /* ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

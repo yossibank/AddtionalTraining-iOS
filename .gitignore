@@ -89,3 +89,6 @@ iOSInjectionProject/
 
 # General
 .DS_Store
+
+# RSwift
+R.generated.swift
