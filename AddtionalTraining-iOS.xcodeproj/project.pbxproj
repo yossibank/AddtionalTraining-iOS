@@ -181,6 +181,7 @@
 				78BCFD6825F31562003618CE /* Frameworks */,
 				78BCFD6925F31562003618CE /* Resources */,
 				5D8A18B4CA43D7F11C89CAB6 /* [CP] Embed Pods Frameworks */,
+				78836B0125FB8AA9006DFD46 /* Swiftlint */,
 			);
 			buildRules = (
 			);
@@ -316,6 +317,24 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AddtionalTraining-iOS/Pods-AddtionalTraining-iOS-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		78836B0125FB8AA9006DFD46 /* Swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Swiftlint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"SwiftLint does not exist, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
 		78BCFDB125F3AC9C003618CE /* RSwift */ = {
 			isa = PBXShellScriptBuildPhase;
