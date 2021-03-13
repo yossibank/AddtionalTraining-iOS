@@ -56,4 +56,4 @@ excluded:
   - Pods/
   - Podfile
   - Podfile.lock
-  - R.generated.swift
+  - AdditionalTraining/AppResources/Support/Rswift/R.generated.swift

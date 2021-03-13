@@ -16,6 +16,7 @@
 		78BCFD7B25F31565003618CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78BCFD7925F31565003618CE /* LaunchScreen.storyboard */; };
 		78BCFD8625F31565003618CE /* AddtionalTraining_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BCFD8525F31565003618CE /* AddtionalTraining_iOSTests.swift */; };
 		78BCFD9125F31565003618CE /* AddtionalTraining_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BCFD9025F31565003618CE /* AddtionalTraining_iOSUITests.swift */; };
+		78EBF08E25FC6BF200613185 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78EBF08D25FC6BF200613185 /* R.generated.swift */; };
 		BB421B46419B780D53B6688C /* Pods_AdditionalTraining_AdditionalTrainingUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC387CD9B089DBA9C8C27798 /* Pods_AdditionalTraining_AdditionalTrainingUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +61,7 @@
 		78BCFD8C25F31565003618CE /* AdditionalTrainingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AdditionalTrainingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		78BCFD9025F31565003618CE /* AddtionalTraining_iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddtionalTraining_iOSUITests.swift; sourceTree = "<group>"; };
 		78BCFD9225F31565003618CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		78EBF08D25FC6BF200613185 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		7CC887D33AB6819910BD8183 /* Pods-AdditionalTraining-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdditionalTraining-iOS.debug.xcconfig"; path = "Target Support Files/Pods-AdditionalTraining-iOS/Pods-AdditionalTraining-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		8ADB37B08036EEA09D1F5DF6 /* Pods-AddtionalTraining-iOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AddtionalTraining-iOSTests.debug.xcconfig"; path = "Target Support Files/Pods-AddtionalTraining-iOSTests/Pods-AddtionalTraining-iOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8BBA444208E34635BC9CF7C0 /* Pods-AdditionalTraining-iOS-AdditionalTraining-iOSUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdditionalTraining-iOS-AdditionalTraining-iOSUITests.debug.xcconfig"; path = "Target Support Files/Pods-AdditionalTraining-iOS-AdditionalTraining-iOSUITests/Pods-AdditionalTraining-iOS-AdditionalTraining-iOSUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -111,6 +113,13 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		782CD9BA25FC6FA100DD468C /* AppConfig */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = AppConfig;
+			sourceTree = "<group>";
+		};
 		78BCFD6225F31562003618CE = {
 			isa = PBXGroup;
 			children = (
@@ -136,12 +145,12 @@
 		78BCFD6D25F31562003618CE /* AdditionalTraining */ = {
 			isa = PBXGroup;
 			children = (
-				78BCFD6E25F31562003618CE /* AppDelegate.swift */,
+				782CD9BA25FC6FA100DD468C /* AppConfig */,
+				78EBF07F25FC6AF500613185 /* AppResources */,
+				78EBF07E25FC6AF000613185 /* Data */,
+				78EBF07625FC6A8E00613185 /* Presentation */,
 				78BCFD7225F31562003618CE /* ViewController.swift */,
 				78BCFD7425F31562003618CE /* Main.storyboard */,
-				78BCFD7725F31565003618CE /* Assets.xcassets */,
-				78BCFD7925F31565003618CE /* LaunchScreen.storyboard */,
-				78BCFD7C25F31565003618CE /* Info.plist */,
 			);
 			path = AdditionalTraining;
 			sourceTree = "<group>";
@@ -162,6 +171,120 @@
 				78BCFD9225F31565003618CE /* Info.plist */,
 			);
 			path = AdditionalTrainingUITests;
+			sourceTree = "<group>";
+		};
+		78EBF07625FC6A8E00613185 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				78BCFD6E25F31562003618CE /* AppDelegate.swift */,
+				78EBF07925FC6AA600613185 /* Convenience */,
+				78EBF07825FC6A9C00613185 /* Presentation-Domain */,
+				78EBF07725FC6A9600613185 /* Utility */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		78EBF07725FC6A9600613185 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		78EBF07825FC6A9C00613185 /* Presentation-Domain */ = {
+			isa = PBXGroup;
+			children = (
+				78EBF07B25FC6ABA00613185 /* Router */,
+				78EBF07C25FC6AC700613185 /* Screen */,
+				78EBF07D25FC6AE300613185 /* View */,
+			);
+			path = "Presentation-Domain";
+			sourceTree = "<group>";
+		};
+		78EBF07925FC6AA600613185 /* Convenience */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Convenience;
+			sourceTree = "<group>";
+		};
+		78EBF07B25FC6ABA00613185 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		78EBF07C25FC6AC700613185 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				78EBF09B25FC6CA400613185 /* Launch */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		78EBF07D25FC6AE300613185 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		78EBF07E25FC6AF000613185 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		78EBF07F25FC6AF500613185 /* AppResources */ = {
+			isa = PBXGroup;
+			children = (
+				78BCFD7725F31565003618CE /* Assets.xcassets */,
+				78EBF08025FC6B1100613185 /* Support */,
+			);
+			path = AppResources;
+			sourceTree = "<group>";
+		};
+		78EBF08025FC6B1100613185 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				78EBF08225FC6B1E00613185 /* InfoPlist */,
+				78EBF08125FC6B1800613185 /* Rswift */,
+				78EBF08325FC6B2700613185 /* LocalizedStrings */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		78EBF08125FC6B1800613185 /* Rswift */ = {
+			isa = PBXGroup;
+			children = (
+				78EBF08D25FC6BF200613185 /* R.generated.swift */,
+			);
+			path = Rswift;
+			sourceTree = "<group>";
+		};
+		78EBF08225FC6B1E00613185 /* InfoPlist */ = {
+			isa = PBXGroup;
+			children = (
+				78BCFD7C25F31565003618CE /* Info.plist */,
+			);
+			path = InfoPlist;
+			sourceTree = "<group>";
+		};
+		78EBF08325FC6B2700613185 /* LocalizedStrings */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = LocalizedStrings;
+			sourceTree = "<group>";
+		};
+		78EBF09B25FC6CA400613185 /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				78BCFD7925F31565003618CE /* LaunchScreen.storyboard */,
+			);
+			path = Launch;
 			sourceTree = "<group>";
 		};
 		92F2FDE8BB8315410016D7D9 /* Pods */ = {
@@ -371,11 +494,11 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				$SRCROOT/R.generated.swift,
+				$SRCROOT/$PROJECT_NAME/AppResources/Support/Rswift/R.generated.swift,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R.generated.swift\"\n";
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/$PROJECT_NAME/AppResources/Support/Rswift/R.generated.swift\"\n";
 		};
 		BCDA5600A9911D9504614162 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -467,6 +590,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78EBF08E25FC6BF200613185 /* R.generated.swift in Sources */,
 				78BCFD6F25F31562003618CE /* AppDelegate.swift in Sources */,
 				78BCFD7325F31562003618CE /* ViewController.swift in Sources */,
 			);
@@ -646,7 +770,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = AdditionalTraining/Info.plist;
+				INFOPLIST_FILE = AdditionalTraining/AppResources/Support/InfoPlist/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -665,7 +789,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = AdditionalTraining/Info.plist;
+				INFOPLIST_FILE = AdditionalTraining/AppResources/Support/InfoPlist/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
