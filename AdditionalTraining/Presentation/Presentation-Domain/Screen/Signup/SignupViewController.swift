@@ -16,6 +16,10 @@ final class SignupViewController: UIViewController {
         return instance
     }
 
+    @IBAction private func showLoginScreen(_ sender: Any) {
+        router.dismiss(self, animated: true)
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
     }

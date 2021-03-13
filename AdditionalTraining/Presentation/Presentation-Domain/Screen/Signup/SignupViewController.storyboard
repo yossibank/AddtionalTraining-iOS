@@ -103,6 +103,9 @@
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                                 <state key="normal" title="ログイン"/>
+                                                <connections>
+                                                    <action selector="showLoginScreen:" destination="08g-lH-Pcw" eventType="touchUpInside" id="xtg-DM-ZG6"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>

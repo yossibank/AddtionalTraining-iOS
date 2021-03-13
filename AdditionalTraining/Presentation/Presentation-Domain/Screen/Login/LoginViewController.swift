@@ -16,6 +16,10 @@ final class LoginViewController: UIViewController {
         return instance
     }
 
+    @IBAction private func showSignupScreen(_ sender: Any) {
+        router.present(.signup, from: self)
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
     }

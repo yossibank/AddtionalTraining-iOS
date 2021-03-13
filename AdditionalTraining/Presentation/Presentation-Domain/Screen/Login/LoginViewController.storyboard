@@ -89,6 +89,9 @@
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                                 <state key="normal" title="新規アカウント作成"/>
+                                                <connections>
+                                                    <action selector="showSignupScreen:" destination="BqW-zc-zv6" eventType="touchUpInside" id="QEe-zd-EJN"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
