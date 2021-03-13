@@ -17,19 +17,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="56" translatesAutoresizingMaskIntoConstraints="NO" id="Um2-VI-dft">
-                                <rect key="frame" x="48" y="211.5" width="318" height="473"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="48" translatesAutoresizingMaskIntoConstraints="NO" id="Um2-VI-dft">
+                                <rect key="frame" x="48" y="220.5" width="318" height="455"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="eEd-HK-vKx">
-                                        <rect key="frame" x="0.0" y="0.0" width="318" height="63"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="318" height="61"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="メールアドレス" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gFE-IZ-9RE">
-                                                <rect key="frame" x="0.0" y="0.0" width="318" height="34"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="メールアドレス" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gFE-IZ-9RE" customClass="BorderBottomTextField" customModule="AdditionalTraining" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="318" height="32"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="32" id="8Pm-0A-ZtX"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="バリデーションエラーメッセージ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dBd-hg-tMY">
-                                                <rect key="frame" x="0.0" y="46" width="318" height="17"/>
+                                                <rect key="frame" x="0.0" y="44" width="318" height="17"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -37,15 +40,18 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="wAA-LS-7vz">
-                                        <rect key="frame" x="0.0" y="119" width="318" height="63"/>
+                                        <rect key="frame" x="0.0" y="109" width="318" height="61"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="パスワード" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XVI-e9-QoI">
-                                                <rect key="frame" x="0.0" y="0.0" width="318" height="34"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="パスワード" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XVI-e9-QoI" customClass="BorderBottomTextField" customModule="AdditionalTraining" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="318" height="32"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="32" id="nJd-Ow-t6N"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="バリデーションエラーメッセージ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qtb-3V-R5I">
-                                                <rect key="frame" x="0.0" y="46" width="318" height="17"/>
+                                                <rect key="frame" x="0.0" y="44" width="318" height="17"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -53,33 +59,49 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="z9e-Q7-ckR">
-                                        <rect key="frame" x="0.0" y="238" width="318" height="63"/>
+                                        <rect key="frame" x="0.0" y="218" width="318" height="61"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="パスワード確認" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VoQ-0o-v35">
-                                                <rect key="frame" x="0.0" y="0.0" width="318" height="34"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="パスワード確認" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VoQ-0o-v35" customClass="BorderBottomTextField" customModule="AdditionalTraining" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="318" height="32"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="32" id="9hb-1h-Mb2"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="バリデーションエラーメッセージ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pf9-J0-HnJ">
-                                                <rect key="frame" x="0.0" y="46" width="318" height="17"/>
+                                                <rect key="frame" x="0.0" y="44" width="318" height="17"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                     </stackView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fnh-z6-LEY">
-                                        <rect key="frame" x="0.0" y="357" width="318" height="30"/>
-                                        <state key="normal" title="アカウント作成"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fnh-z6-LEY" customClass="IBDesignableButton" customModule="AdditionalTraining" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="327" width="318" height="48"/>
+                                        <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="48" id="idk-um-GFG"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                        <state key="normal" title="アカウント作成">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="12"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="WBC-HS-oEM">
-                                        <rect key="frame" x="0.0" y="443" width="318" height="30"/>
+                                        <rect key="frame" x="0.0" y="423" width="318" height="32"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yDb-4v-8yd">
-                                                <rect key="frame" x="168" y="0.0" width="150" height="30"/>
+                                                <rect key="frame" x="238" y="0.0" width="80" height="32"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="150" id="7fD-hM-3YV"/>
+                                                    <constraint firstAttribute="width" constant="80" id="7fD-hM-3YV"/>
                                                 </constraints>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                                 <state key="normal" title="ログイン"/>
                                             </button>
                                         </subviews>
@@ -101,9 +123,26 @@
             <point key="canvasLocation" x="-312" y="99"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="Fnh-z6-LEY">
+            <size key="intrinsicContentSize" width="115" height="32"/>
+        </designable>
+        <designable name="VoQ-0o-v35">
+            <size key="intrinsicContentSize" width="114.5" height="21"/>
+        </designable>
+        <designable name="XVI-e9-QoI">
+            <size key="intrinsicContentSize" width="82" height="21"/>
+        </designable>
+        <designable name="gFE-IZ-9RE">
+            <size key="intrinsicContentSize" width="114.5" height="21"/>
+        </designable>
+    </designables>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
