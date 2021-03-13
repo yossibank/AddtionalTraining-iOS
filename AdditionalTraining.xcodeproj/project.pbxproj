@@ -19,6 +19,10 @@
 		782CDA0425FC827400DD468C /* IBDesignableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782CDA0325FC827400DD468C /* IBDesignableTextField.swift */; };
 		782CDA2325FC8E9F00DD468C /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782CDA2225FC8E9F00DD468C /* MainNavigationController.swift */; };
 		782CDA2B25FC8ECF00DD468C /* MainNavigationController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 782CDA2A25FC8ECF00DD468C /* MainNavigationController.storyboard */; };
+		782CDA3025FC92C500DD468C /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782CDA2F25FC92C500DD468C /* Router.swift */; };
+		782CDA3525FC939200DD468C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782CDA3425FC939200DD468C /* ViewController.swift */; };
+		782CDA3A25FC93C400DD468C /* Resources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782CDA3925FC93C400DD468C /* Resources.swift */; };
+		782CDA4125FC948A00DD468C /* ResourcesSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782CDA4025FC948A00DD468C /* ResourcesSupport.swift */; };
 		78BCFD6F25F31562003618CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BCFD6E25F31562003618CE /* AppDelegate.swift */; };
 		78BCFD7825F31565003618CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78BCFD7725F31565003618CE /* Assets.xcassets */; };
 		78BCFD7B25F31565003618CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78BCFD7925F31565003618CE /* LaunchScreen.storyboard */; };
@@ -66,6 +70,10 @@
 		782CDA0325FC827400DD468C /* IBDesignableTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IBDesignableTextField.swift; sourceTree = "<group>"; };
 		782CDA2225FC8E9F00DD468C /* MainNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
 		782CDA2A25FC8ECF00DD468C /* MainNavigationController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainNavigationController.storyboard; sourceTree = "<group>"; };
+		782CDA2F25FC92C500DD468C /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		782CDA3425FC939200DD468C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		782CDA3925FC93C400DD468C /* Resources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resources.swift; sourceTree = "<group>"; };
+		782CDA4025FC948A00DD468C /* ResourcesSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourcesSupport.swift; sourceTree = "<group>"; };
 		78BCFD6B25F31562003618CE /* AdditionalTraining.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AdditionalTraining.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		78BCFD6E25F31562003618CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		78BCFD7725F31565003618CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -265,6 +273,7 @@
 		78EBF07925FC6AA600613185 /* Convenience */ = {
 			isa = PBXGroup;
 			children = (
+				782CDA3425FC939200DD468C /* ViewController.swift */,
 			);
 			path = Convenience;
 			sourceTree = "<group>";
@@ -272,6 +281,7 @@
 		78EBF07B25FC6ABA00613185 /* Router */ = {
 			isa = PBXGroup;
 			children = (
+				782CDA2F25FC92C500DD468C /* Router.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -305,6 +315,8 @@
 			isa = PBXGroup;
 			children = (
 				78BCFD7725F31565003618CE /* Assets.xcassets */,
+				782CDA3925FC93C400DD468C /* Resources.swift */,
+				782CDA4025FC948A00DD468C /* ResourcesSupport.swift */,
 				78EBF08025FC6B1100613185 /* Support */,
 			);
 			path = AppResources;
@@ -658,11 +670,15 @@
 			files = (
 				782CDA2325FC8E9F00DD468C /* MainNavigationController.swift in Sources */,
 				782CDA0425FC827400DD468C /* IBDesignableTextField.swift in Sources */,
+				782CDA3025FC92C500DD468C /* Router.swift in Sources */,
 				782CD9EE25FC7D8000DD468C /* UIView-IBInspectable+Extension.swift in Sources */,
+				782CDA3525FC939200DD468C /* ViewController.swift in Sources */,
 				782CD9F725FC812F00DD468C /* IBDesignableView.swift in Sources */,
 				78EBF08E25FC6BF200613185 /* R.generated.swift in Sources */,
 				782CD9FF25FC822700DD468C /* IBDesinableButton.swift in Sources */,
 				78BCFD6F25F31562003618CE /* AppDelegate.swift in Sources */,
+				782CDA3A25FC93C400DD468C /* Resources.swift in Sources */,
+				782CDA4125FC948A00DD468C /* ResourcesSupport.swift in Sources */,
 				782CD9DE25FC70FF00DD468C /* LoginViewController.swift in Sources */,
 				782CD9BE25FC6FF900DD468C /* SignupViewController.swift in Sources */,
 			);

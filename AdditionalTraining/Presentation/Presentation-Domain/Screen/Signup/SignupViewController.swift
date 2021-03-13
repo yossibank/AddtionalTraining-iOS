@@ -9,6 +9,13 @@ import UIKit
 
 final class SignupViewController: UIViewController {
 
+    private let router: RouterProtocol = Router()
+
+    static func createInstance() -> SignupViewController {
+        let instance = SignupViewController.instantiateInitialViewController()
+        return instance
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
     }
