@@ -17,6 +17,8 @@
 		782CD9F725FC812F00DD468C /* IBDesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782CD9F625FC812F00DD468C /* IBDesignableView.swift */; };
 		782CD9FF25FC822700DD468C /* IBDesinableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782CD9FE25FC822700DD468C /* IBDesinableButton.swift */; };
 		782CDA0425FC827400DD468C /* IBDesignableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782CDA0325FC827400DD468C /* IBDesignableTextField.swift */; };
+		782CDA2325FC8E9F00DD468C /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782CDA2225FC8E9F00DD468C /* MainNavigationController.swift */; };
+		782CDA2B25FC8ECF00DD468C /* MainNavigationController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 782CDA2A25FC8ECF00DD468C /* MainNavigationController.storyboard */; };
 		78BCFD6F25F31562003618CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BCFD6E25F31562003618CE /* AppDelegate.swift */; };
 		78BCFD7825F31565003618CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78BCFD7725F31565003618CE /* Assets.xcassets */; };
 		78BCFD7B25F31565003618CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78BCFD7925F31565003618CE /* LaunchScreen.storyboard */; };
@@ -62,6 +64,8 @@
 		782CD9F625FC812F00DD468C /* IBDesignableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IBDesignableView.swift; sourceTree = "<group>"; };
 		782CD9FE25FC822700DD468C /* IBDesinableButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IBDesinableButton.swift; sourceTree = "<group>"; };
 		782CDA0325FC827400DD468C /* IBDesignableTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IBDesignableTextField.swift; sourceTree = "<group>"; };
+		782CDA2225FC8E9F00DD468C /* MainNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
+		782CDA2A25FC8ECF00DD468C /* MainNavigationController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainNavigationController.storyboard; sourceTree = "<group>"; };
 		78BCFD6B25F31562003618CE /* AdditionalTraining.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AdditionalTraining.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		78BCFD6E25F31562003618CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		78BCFD7725F31565003618CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -168,6 +172,15 @@
 			path = IBDesignable;
 			sourceTree = "<group>";
 		};
+		782CDA2125FC8E8800DD468C /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				782CDA2225FC8E9F00DD468C /* MainNavigationController.swift */,
+				782CDA2A25FC8ECF00DD468C /* MainNavigationController.storyboard */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
 		78BCFD6225F31562003618CE = {
 			isa = PBXGroup;
 			children = (
@@ -267,6 +280,7 @@
 			isa = PBXGroup;
 			children = (
 				78EBF09B25FC6CA400613185 /* Launch */,
+				782CDA2125FC8E8800DD468C /* Navigation */,
 				782CD9BB25FC6FC600DD468C /* Signup */,
 				782CD9BC25FC6FD000DD468C /* Login */,
 			);
@@ -474,6 +488,7 @@
 			files = (
 				78BCFD7825F31565003618CE /* Assets.xcassets in Resources */,
 				782CD9D925FC70B600DD468C /* LoginViewController.storyboard in Resources */,
+				782CDA2B25FC8ECF00DD468C /* MainNavigationController.storyboard in Resources */,
 				78BCFD7B25F31565003618CE /* LaunchScreen.storyboard in Resources */,
 				782CD9C625FC700C00DD468C /* SignupViewController.storyboard in Resources */,
 			);
@@ -641,6 +656,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				782CDA2325FC8E9F00DD468C /* MainNavigationController.swift in Sources */,
 				782CDA0425FC827400DD468C /* IBDesignableTextField.swift in Sources */,
 				782CD9EE25FC7D8000DD468C /* UIView-IBInspectable+Extension.swift in Sources */,
 				782CD9F725FC812F00DD468C /* IBDesignableView.swift in Sources */,

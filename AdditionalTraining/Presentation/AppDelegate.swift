@@ -16,6 +16,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         _ application: UIApplication,
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
     ) -> Bool {
+        let mainVC = MainNaviagtionController(
+            rootViewController: R.storyboard.loginViewController.instantiateInitialViewController()!
+        )
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.rootViewController = mainVC
+        window?.makeKeyAndVisible()
+
         return true
     }
 }
