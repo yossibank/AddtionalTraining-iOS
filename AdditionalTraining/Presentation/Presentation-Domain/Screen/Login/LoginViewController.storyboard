@@ -17,8 +17,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="56" translatesAutoresizingMaskIntoConstraints="NO" id="xd1-ey-P0m">
-                                <rect key="frame" x="48" y="263" width="318" height="370"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="xd1-ey-P0m">
+                                <rect key="frame" x="48" y="299" width="318" height="298"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="ZAl-Ga-X3B">
                                         <rect key="frame" x="0.0" y="0.0" width="318" height="61"/>
@@ -45,7 +45,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="LUB-HU-o5i">
-                                        <rect key="frame" x="0.0" y="117" width="318" height="61"/>
+                                        <rect key="frame" x="0.0" y="93" width="318" height="61"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="パスワード" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8og-i4-Do4" customClass="BorderBottomTextField" customModule="AdditionalTraining" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="318" height="32"/>
@@ -64,7 +64,7 @@
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UQU-b3-ziY" customClass="IBDesignableButton" customModule="AdditionalTraining" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="234" width="318" height="48"/>
+                                        <rect key="frame" x="0.0" y="186" width="318" height="48"/>
                                         <color key="backgroundColor" systemColor="systemBlueColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="tl6-57-dHa"/>
@@ -80,7 +80,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="qiu-m5-mLY">
-                                        <rect key="frame" x="0.0" y="338" width="318" height="32"/>
+                                        <rect key="frame" x="0.0" y="266" width="318" height="32"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hqa-8F-fUt">
                                                 <rect key="frame" x="158" y="0.0" width="160" height="32"/>
@@ -106,6 +106,10 @@
                             <constraint firstItem="xd1-ey-P0m" firstAttribute="leading" secondItem="oNg-0e-jDb" secondAttribute="leading" constant="48" id="cUa-iL-Yhh"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="loginButton" destination="UQU-b3-ziY" id="uaf-mY-WZI"/>
+                        <outlet property="stackView" destination="xd1-ey-P0m" id="F59-px-Dyv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DvN-DR-Sq3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
