@@ -192,6 +192,11 @@ final class Router: RouterProtocol {
             from as? MainNavigationController ??
             from.navigationController as? MainNavigationController
 
+        navVC?.setupNavigationBar(
+            forVC: vc,
+            config: vc as? NavigationBarConfiguration
+        )
+
         navVC?.pushViewController(
             vc,
             animated: animated
@@ -253,6 +258,11 @@ final class Router: RouterProtocol {
             navVC.modalPresentationStyle = presentationStyle
             navVC.viewControllers = [vc]
 
+            navVC.setupNavigationBar(
+                forVC: vc,
+                config: vc as? NavigationBarConfiguration
+            )
+
             from.present(
                 navVC,
                 animated:   animated,
@@ -306,6 +316,10 @@ final class Router: RouterProtocol {
             let vc = route.viewController()
 
             navVC.viewControllers.insert(vc, at: 0)
+            navVC.setupNavigationBar(
+                forVC: vc,
+                config: vc as? NavigationBarConfiguration
+            )
 
             viewController = navVC
         }

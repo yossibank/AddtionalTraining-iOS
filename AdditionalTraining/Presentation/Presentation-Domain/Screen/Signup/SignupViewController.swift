@@ -24,3 +24,7 @@ final class SignupViewController: UIViewController {
         super.viewDidLoad()
     }
 }
+
+extension SignupViewController: NavigationBarConfiguration {
+    var navigationTitle: String? { "サインアップ" }
+}

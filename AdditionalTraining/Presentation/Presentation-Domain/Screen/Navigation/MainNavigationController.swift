@@ -13,3 +13,13 @@ final class MainNavigationController: UINavigationController {
         super.viewDidLoad()
     }
 }
+
+extension MainNavigationController {
+
+    func setupNavigationBar(
+        forVC vc: UIViewController,
+        config: NavigationBarConfiguration?
+    ) {
+        vc.navigationItem.title = config?.navigationTitle
+    }
+}

@@ -24,3 +24,7 @@ final class LoginViewController: UIViewController {
         super.viewDidLoad()
     }
 }
+
+extension LoginViewController: NavigationBarConfiguration {
+    var navigationTitle: String? { "ログイン" }
+}

@@ -23,6 +23,7 @@
 		782CDA3525FC939200DD468C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782CDA3425FC939200DD468C /* ViewController.swift */; };
 		782CDA3A25FC93C400DD468C /* Resources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782CDA3925FC93C400DD468C /* Resources.swift */; };
 		782CDA4125FC948A00DD468C /* ResourcesSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782CDA4025FC948A00DD468C /* ResourcesSupport.swift */; };
+		78A922FA25FCA97500516F3A /* NavigationBarConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A922F925FCA97500516F3A /* NavigationBarConfiguration.swift */; };
 		78BCFD6F25F31562003618CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BCFD6E25F31562003618CE /* AppDelegate.swift */; };
 		78BCFD7825F31565003618CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78BCFD7725F31565003618CE /* Assets.xcassets */; };
 		78BCFD7B25F31565003618CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78BCFD7925F31565003618CE /* LaunchScreen.storyboard */; };
@@ -74,6 +75,7 @@
 		782CDA3425FC939200DD468C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		782CDA3925FC93C400DD468C /* Resources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resources.swift; sourceTree = "<group>"; };
 		782CDA4025FC948A00DD468C /* ResourcesSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourcesSupport.swift; sourceTree = "<group>"; };
+		78A922F925FCA97500516F3A /* NavigationBarConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarConfiguration.swift; sourceTree = "<group>"; };
 		78BCFD6B25F31562003618CE /* AdditionalTraining.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AdditionalTraining.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		78BCFD6E25F31562003618CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		78BCFD7725F31565003618CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -189,6 +191,14 @@
 			path = Navigation;
 			sourceTree = "<group>";
 		};
+		78A922F825FCA93B00516F3A /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				78A922F925FCA97500516F3A /* NavigationBarConfiguration.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
 		78BCFD6225F31562003618CE = {
 			isa = PBXGroup;
 			children = (
@@ -254,8 +264,9 @@
 		78EBF07725FC6A9600613185 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
-				782CD9F525FC801700DD468C /* IBDesignable */,
+				78A922F825FCA93B00516F3A /* Protocol */,
 				782CD9EC25FC7D5C00DD468C /* Extension */,
+				782CD9F525FC801700DD468C /* IBDesignable */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -680,6 +691,7 @@
 				782CDA3A25FC93C400DD468C /* Resources.swift in Sources */,
 				782CDA4125FC948A00DD468C /* ResourcesSupport.swift in Sources */,
 				782CD9DE25FC70FF00DD468C /* LoginViewController.swift in Sources */,
+				78A922FA25FCA97500516F3A /* NavigationBarConfiguration.swift in Sources */,
 				782CD9BE25FC6FF900DD468C /* SignupViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
