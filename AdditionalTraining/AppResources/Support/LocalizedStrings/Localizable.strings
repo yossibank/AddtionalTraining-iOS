@@ -6,7 +6,13 @@
   
 */
 
+// MARK: - アプリケーション
+"email_address" = "メールアドレス";
+
 // MARK: - ナビゲーション
 "signup" = "サインアップ";
 "login" = "ログイン";
 
+// MARK: - バリデーションメッセージ
+"not_filled" = "%@が入力されていません";
+"not_correct_email_format" = "メールアドレスが正しいフォームで入力されていません";

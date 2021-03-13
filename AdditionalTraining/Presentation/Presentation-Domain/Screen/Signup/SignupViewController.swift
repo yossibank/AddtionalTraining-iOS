@@ -6,15 +6,24 @@
 //
 
 import UIKit
+import Combine
 
 final class SignupViewController: UIViewController {
 
     @IBOutlet private weak var stackView: UIStackView!
+    @IBOutlet private weak var emailTextField: UITextField!
+    @IBOutlet private weak var passwordTextField: UITextField!
+    @IBOutlet private weak var confimPasswordTextField: UITextField!
+    @IBOutlet private weak var validateEmailLabel: UILabel!
+    @IBOutlet private weak var validatePasswordLabel: UILabel!
+    @IBOutlet private weak var validateConfirmPasswordLabel: UILabel!
     @IBOutlet private weak var signupButton: UIButton!
 
     var keyboardNotifier: KeyboardNotifier = KeyboardNotifier()
 
     private let router: RouterProtocol = Router()
+
+    private var cancellables: Set<AnyCancellable> = .init()
 
     static func createInstance() -> SignupViewController {
         let instance = SignupViewController.instantiateInitialViewController()
@@ -28,6 +37,22 @@ final class SignupViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         listenerKeyboard(keyboardNotifier: keyboardNotifier)
+        bindValue()
+    }
+}
+
+extension SignupViewController {
+
+    private func bindValue() {
+        emailTextField.textDidChnagePublisher
+            .debounce(for: 0.5, scheduler: RunLoop.main)
+            .sink { [weak self] text in
+                guard let self = self else { return }
+
+                let validationText = EmailValidator.validate(text).errorDescription
+                self.validateEmailLabel.text = (validationText ?? .blank).isEmpty ? .blank : validationText
+            }
+            .store(in: &cancellables)
     }
 }
 

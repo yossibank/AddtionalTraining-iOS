@@ -23,6 +23,9 @@
 		782CDA3525FC939200DD468C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782CDA3425FC939200DD468C /* ViewController.swift */; };
 		782CDA3A25FC93C400DD468C /* AppResources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782CDA3925FC93C400DD468C /* AppResources.swift */; };
 		782CDA4125FC948A00DD468C /* ResourcesSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782CDA4025FC948A00DD468C /* ResourcesSupport.swift */; };
+		7852FB3F25FCDA1C000438CD /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7852FB3E25FCDA1C000438CD /* Validator.swift */; };
+		7852FB4525FCDADA000438CD /* EmailValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7852FB4425FCDADA000438CD /* EmailValidator.swift */; };
+		7852FB4E25FCDE98000438CD /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7852FB4D25FCDE98000438CD /* UITextField+Extension.swift */; };
 		78A922FA25FCA97500516F3A /* NavigationBarConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A922F925FCA97500516F3A /* NavigationBarConfiguration.swift */; };
 		78A9230F25FCAB5E00516F3A /* AppStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A9230E25FCAB5E00516F3A /* AppStrings.swift */; };
 		78A9231425FCABB400516F3A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 78A9231325FCABB400516F3A /* Localizable.strings */; };
@@ -32,6 +35,7 @@
 		78BCFD7B25F31565003618CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78BCFD7925F31565003618CE /* LaunchScreen.storyboard */; };
 		78BCFD8625F31565003618CE /* AddtionalTraining_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BCFD8525F31565003618CE /* AddtionalTraining_iOSTests.swift */; };
 		78BCFD9125F31565003618CE /* AddtionalTraining_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BCFD9025F31565003618CE /* AddtionalTraining_iOSUITests.swift */; };
+		78DF93E225FCECE600C50A29 /* Stirng+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DF93E125FCECE600C50A29 /* Stirng+Util.swift */; };
 		78EBF08E25FC6BF200613185 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78EBF08D25FC6BF200613185 /* R.generated.swift */; };
 		BB421B46419B780D53B6688C /* Pods_AdditionalTraining_AdditionalTrainingUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC387CD9B089DBA9C8C27798 /* Pods_AdditionalTraining_AdditionalTrainingUITests.framework */; };
 /* End PBXBuildFile section */
@@ -78,6 +82,9 @@
 		782CDA3425FC939200DD468C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		782CDA3925FC93C400DD468C /* AppResources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppResources.swift; sourceTree = "<group>"; };
 		782CDA4025FC948A00DD468C /* ResourcesSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourcesSupport.swift; sourceTree = "<group>"; };
+		7852FB3E25FCDA1C000438CD /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
+		7852FB4425FCDADA000438CD /* EmailValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidator.swift; sourceTree = "<group>"; };
+		7852FB4D25FCDE98000438CD /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
 		78A922F925FCA97500516F3A /* NavigationBarConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarConfiguration.swift; sourceTree = "<group>"; };
 		78A9230E25FCAB5E00516F3A /* AppStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStrings.swift; sourceTree = "<group>"; };
 		78A9231325FCABB400516F3A /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
@@ -93,6 +100,7 @@
 		78BCFD8C25F31565003618CE /* AdditionalTrainingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AdditionalTrainingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		78BCFD9025F31565003618CE /* AddtionalTraining_iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddtionalTraining_iOSUITests.swift; sourceTree = "<group>"; };
 		78BCFD9225F31565003618CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		78DF93E125FCECE600C50A29 /* Stirng+Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Stirng+Util.swift"; sourceTree = "<group>"; };
 		78EBF08D25FC6BF200613185 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		7CC887D33AB6819910BD8183 /* Pods-AdditionalTraining-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdditionalTraining-iOS.debug.xcconfig"; path = "Target Support Files/Pods-AdditionalTraining-iOS/Pods-AdditionalTraining-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		8ADB37B08036EEA09D1F5DF6 /* Pods-AddtionalTraining-iOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AddtionalTraining-iOSTests.debug.xcconfig"; path = "Target Support Files/Pods-AddtionalTraining-iOSTests/Pods-AddtionalTraining-iOSTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -174,6 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				782CD9ED25FC7D8000DD468C /* UIView-IBInspectable+Extension.swift */,
+				7852FB4C25FCDE86000438CD /* Combine */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -197,11 +206,28 @@
 			path = Navigation;
 			sourceTree = "<group>";
 		};
+		7852FB4325FCDABC000438CD /* Validation */ = {
+			isa = PBXGroup;
+			children = (
+				7852FB4425FCDADA000438CD /* EmailValidator.swift */,
+			);
+			path = Validation;
+			sourceTree = "<group>";
+		};
+		7852FB4C25FCDE86000438CD /* Combine */ = {
+			isa = PBXGroup;
+			children = (
+				7852FB4D25FCDE98000438CD /* UITextField+Extension.swift */,
+			);
+			path = Combine;
+			sourceTree = "<group>";
+		};
 		78A922F825FCA93B00516F3A /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
 				78A922F925FCA97500516F3A /* NavigationBarConfiguration.swift */,
 				78A9231B25FCB0BD00516F3A /* KeyboardNotfier.swift */,
+				7852FB3E25FCDA1C000438CD /* Validator.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -257,6 +283,14 @@
 			path = AdditionalTrainingUITests;
 			sourceTree = "<group>";
 		};
+		78DF93E025FCECBA00C50A29 /* AppUtil */ = {
+			isa = PBXGroup;
+			children = (
+				78DF93E125FCECE600C50A29 /* Stirng+Util.swift */,
+			);
+			path = AppUtil;
+			sourceTree = "<group>";
+		};
 		78EBF07625FC6A8E00613185 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
@@ -271,8 +305,10 @@
 		78EBF07725FC6A9600613185 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
-				78A922F825FCA93B00516F3A /* Protocol */,
+				78DF93E025FCECBA00C50A29 /* AppUtil */,
 				782CD9EC25FC7D5C00DD468C /* Extension */,
+				78A922F825FCA93B00516F3A /* Protocol */,
+				7852FB4325FCDABC000438CD /* Validation */,
 				782CD9F525FC801700DD468C /* IBDesignable */,
 			);
 			path = Utility;
@@ -689,6 +725,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7852FB4E25FCDE98000438CD /* UITextField+Extension.swift in Sources */,
 				782CDA2325FC8E9F00DD468C /* MainNavigationController.swift in Sources */,
 				782CDA0425FC827400DD468C /* IBDesignableTextField.swift in Sources */,
 				782CDA3025FC92C500DD468C /* Router.swift in Sources */,
@@ -700,7 +737,10 @@
 				782CD9FF25FC822700DD468C /* IBDesinableButton.swift in Sources */,
 				78BCFD6F25F31562003618CE /* AppDelegate.swift in Sources */,
 				782CDA3A25FC93C400DD468C /* AppResources.swift in Sources */,
+				78DF93E225FCECE600C50A29 /* Stirng+Util.swift in Sources */,
+				7852FB4525FCDADA000438CD /* EmailValidator.swift in Sources */,
 				782CDA4125FC948A00DD468C /* ResourcesSupport.swift in Sources */,
+				7852FB3F25FCDA1C000438CD /* Validator.swift in Sources */,
 				782CD9DE25FC70FF00DD468C /* LoginViewController.swift in Sources */,
 				78A9231C25FCB0BD00516F3A /* KeyboardNotfier.swift in Sources */,
 				78A922FA25FCA97500516F3A /* NavigationBarConfiguration.swift in Sources */,

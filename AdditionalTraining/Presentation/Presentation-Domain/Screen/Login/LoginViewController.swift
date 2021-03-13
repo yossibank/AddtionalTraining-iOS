@@ -6,15 +6,22 @@
 //
 
 import UIKit
+import Combine
 
 final class LoginViewController: UIViewController {
 
     @IBOutlet private weak var stackView: UIStackView!
+    @IBOutlet private weak var emailTextField: UITextField!
+    @IBOutlet private weak var passwordTextField: UITextField!
+    @IBOutlet private weak var validateEmailLabel: UILabel!
+    @IBOutlet private weak var validatePasswordLabel: UILabel!
     @IBOutlet private weak var loginButton: UIButton!
 
     var keyboardNotifier: KeyboardNotifier = KeyboardNotifier()
 
     private let router: RouterProtocol = Router()
+
+    private var cancellables: Set<AnyCancellable> = .init()
 
     static func createInstance() -> LoginViewController {
         let instance = LoginViewController.instantiateInitialViewController()
@@ -22,12 +29,28 @@ final class LoginViewController: UIViewController {
     }
 
     @IBAction private func showSignupScreen(_ sender: Any) {
-        router.present(.signup, from: self)
+        router.present(.signup, from: self, presentationStyle: .fullScreen)
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         listenerKeyboard(keyboardNotifier: keyboardNotifier)
+        bindValue()
+    }
+}
+
+extension LoginViewController {
+
+    private func bindValue() {
+        emailTextField.textDidChnagePublisher
+            .debounce(for: 0.5, scheduler: RunLoop.main)
+            .sink { [weak self] text in
+                guard let self = self else { return }
+
+                let validationText = EmailValidator.validate(text).errorDescription
+                self.validateEmailLabel.text = (validationText ?? .blank).isEmpty ? .blank : validationText
+            }
+            .store(in: &cancellables)
     }
 }
 
