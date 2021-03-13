@@ -26,5 +26,8 @@ final class SignupViewController: UIViewController {
 }
 
 extension SignupViewController: NavigationBarConfiguration {
-    var navigationTitle: String? { "サインアップ" }
+
+    var navigationTitle: String? {
+        Resources.Strings.Naviagtion.signup
+    }
 }

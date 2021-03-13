@@ -21,9 +21,11 @@
 		782CDA2B25FC8ECF00DD468C /* MainNavigationController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 782CDA2A25FC8ECF00DD468C /* MainNavigationController.storyboard */; };
 		782CDA3025FC92C500DD468C /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782CDA2F25FC92C500DD468C /* Router.swift */; };
 		782CDA3525FC939200DD468C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782CDA3425FC939200DD468C /* ViewController.swift */; };
-		782CDA3A25FC93C400DD468C /* Resources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782CDA3925FC93C400DD468C /* Resources.swift */; };
+		782CDA3A25FC93C400DD468C /* AppResources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782CDA3925FC93C400DD468C /* AppResources.swift */; };
 		782CDA4125FC948A00DD468C /* ResourcesSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782CDA4025FC948A00DD468C /* ResourcesSupport.swift */; };
 		78A922FA25FCA97500516F3A /* NavigationBarConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A922F925FCA97500516F3A /* NavigationBarConfiguration.swift */; };
+		78A9230F25FCAB5E00516F3A /* AppStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A9230E25FCAB5E00516F3A /* AppStrings.swift */; };
+		78A9231425FCABB400516F3A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 78A9231325FCABB400516F3A /* Localizable.strings */; };
 		78BCFD6F25F31562003618CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BCFD6E25F31562003618CE /* AppDelegate.swift */; };
 		78BCFD7825F31565003618CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78BCFD7725F31565003618CE /* Assets.xcassets */; };
 		78BCFD7B25F31565003618CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78BCFD7925F31565003618CE /* LaunchScreen.storyboard */; };
@@ -73,9 +75,11 @@
 		782CDA2A25FC8ECF00DD468C /* MainNavigationController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainNavigationController.storyboard; sourceTree = "<group>"; };
 		782CDA2F25FC92C500DD468C /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		782CDA3425FC939200DD468C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		782CDA3925FC93C400DD468C /* Resources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resources.swift; sourceTree = "<group>"; };
+		782CDA3925FC93C400DD468C /* AppResources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppResources.swift; sourceTree = "<group>"; };
 		782CDA4025FC948A00DD468C /* ResourcesSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourcesSupport.swift; sourceTree = "<group>"; };
 		78A922F925FCA97500516F3A /* NavigationBarConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarConfiguration.swift; sourceTree = "<group>"; };
+		78A9230E25FCAB5E00516F3A /* AppStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStrings.swift; sourceTree = "<group>"; };
+		78A9231325FCABB400516F3A /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		78BCFD6B25F31562003618CE /* AdditionalTraining.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AdditionalTraining.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		78BCFD6E25F31562003618CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		78BCFD7725F31565003618CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -326,7 +330,8 @@
 			isa = PBXGroup;
 			children = (
 				78BCFD7725F31565003618CE /* Assets.xcassets */,
-				782CDA3925FC93C400DD468C /* Resources.swift */,
+				782CDA3925FC93C400DD468C /* AppResources.swift */,
+				78A9230E25FCAB5E00516F3A /* AppStrings.swift */,
 				782CDA4025FC948A00DD468C /* ResourcesSupport.swift */,
 				78EBF08025FC6B1100613185 /* Support */,
 			);
@@ -362,6 +367,7 @@
 		78EBF08325FC6B2700613185 /* LocalizedStrings */ = {
 			isa = PBXGroup;
 			children = (
+				78A9231325FCABB400516F3A /* Localizable.strings */,
 			);
 			path = LocalizedStrings;
 			sourceTree = "<group>";
@@ -510,6 +516,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				78BCFD7825F31565003618CE /* Assets.xcassets in Resources */,
+				78A9231425FCABB400516F3A /* Localizable.strings in Resources */,
 				782CD9D925FC70B600DD468C /* LoginViewController.storyboard in Resources */,
 				782CDA2B25FC8ECF00DD468C /* MainNavigationController.storyboard in Resources */,
 				78BCFD7B25F31565003618CE /* LaunchScreen.storyboard in Resources */,
@@ -682,13 +689,14 @@
 				782CDA2325FC8E9F00DD468C /* MainNavigationController.swift in Sources */,
 				782CDA0425FC827400DD468C /* IBDesignableTextField.swift in Sources */,
 				782CDA3025FC92C500DD468C /* Router.swift in Sources */,
+				78A9230F25FCAB5E00516F3A /* AppStrings.swift in Sources */,
 				782CD9EE25FC7D8000DD468C /* UIView-IBInspectable+Extension.swift in Sources */,
 				782CDA3525FC939200DD468C /* ViewController.swift in Sources */,
 				782CD9F725FC812F00DD468C /* IBDesignableView.swift in Sources */,
 				78EBF08E25FC6BF200613185 /* R.generated.swift in Sources */,
 				782CD9FF25FC822700DD468C /* IBDesinableButton.swift in Sources */,
 				78BCFD6F25F31562003618CE /* AppDelegate.swift in Sources */,
-				782CDA3A25FC93C400DD468C /* Resources.swift in Sources */,
+				782CDA3A25FC93C400DD468C /* AppResources.swift in Sources */,
 				782CDA4125FC948A00DD468C /* ResourcesSupport.swift in Sources */,
 				782CD9DE25FC70FF00DD468C /* LoginViewController.swift in Sources */,
 				78A922FA25FCA97500516F3A /* NavigationBarConfiguration.swift in Sources */,

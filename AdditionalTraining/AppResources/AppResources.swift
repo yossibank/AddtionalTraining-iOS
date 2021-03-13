@@ -5,4 +5,6 @@
 //  Created by KAMIYAMA YOSHIHITO on 2021/03/13.
 //
 
-struct Resources {}
+struct Resources {
+    typealias Strings = StringResources
+}

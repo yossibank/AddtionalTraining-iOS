@@ -26,5 +26,8 @@ final class LoginViewController: UIViewController {
 }
 
 extension LoginViewController: NavigationBarConfiguration {
-    var navigationTitle: String? { "ログイン" }
+
+    var navigationTitle: String? {
+        Resources.Strings.Naviagtion.login
+    }
 }
