@@ -31,7 +31,9 @@ final class LoginViewController: UIViewController {
     }
 
     @IBAction private func showBookListScreen(_ sender: Any) {
-        viewModel.login()
+        if viewModel.isValidate() {
+            viewModel.login()
+        }
     }
 
     @IBAction private func showSignupScreen(_ sender: Any) {
@@ -62,24 +64,38 @@ extension LoginViewController {
 
     private func bindViewModel() {
         viewModel.$email
-            .debounce(for: 0.5, scheduler: RunLoop.main)
+            .debounce(for: 0.3, scheduler: RunLoop.main)
             .dropFirst()
             .sink { [weak self] text in
                 guard let self = self else { return }
 
-                let validationText = EmailValidator.validate(text).errorDescription
-                self.validateEmailLabel.text = (validationText ?? .blank).isEmpty ? .blank : validationText
+                self.validateEmailLabel.text = self.viewModel.validationEmailText
             }
             .store(in: &cancellables)
 
         viewModel.$password
-            .debounce(for: 0.5, scheduler: RunLoop.main)
+            .debounce(for: 0.3, scheduler: RunLoop.main)
             .dropFirst()
             .sink { [weak self] text in
                 guard let self = self else { return }
 
-                let validationText = PasswordValidator.validate(text).errorDescription
-                self.validatePasswordLabel.text = (validationText ?? .blank).isEmpty ? .blank : validationText
+                self.validatePasswordLabel.text = self.viewModel.validationPasswordText
+            }
+            .store(in: &cancellables)
+        
+        Publishers
+            .CombineLatest(viewModel.$email, viewModel.$password)
+            .debounce(for: 0.3, scheduler: RunLoop.main)
+            .map { emailText, passwordText in
+                return !(emailText.isEmpty || passwordText.isEmpty)
+                    && self.viewModel.validationEmailText == nil
+                    && self.viewModel.validationPasswordText == nil
+            }
+            .sink { [weak self] isEnabled in
+                guard let self = self else { return }
+
+                self.loginButton.alpha = isEnabled ? 1.0 : 0.5
+                self.loginButton.isEnabled = isEnabled
             }
             .store(in: &cancellables)
     }

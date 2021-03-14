@@ -23,7 +23,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="ZAl-Ga-X3B">
                                         <rect key="frame" x="0.0" y="0.0" width="318" height="52"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="メールアドレス" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gfG-Xe-I6Y" customClass="BorderBottomTextField" customModule="AdditionalTraining" customModuleProvider="target">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="メールアドレス" textAlignment="natural" minimumFontSize="17" clearButtonMode="unlessEditing" translatesAutoresizingMaskIntoConstraints="NO" id="gfG-Xe-I6Y" customClass="BorderBottomTextField" customModule="AdditionalTraining" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="318" height="32"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="32" id="uvg-r0-Cuf"/>
@@ -50,7 +50,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="LUB-HU-o5i">
                                         <rect key="frame" x="0.0" y="84" width="318" height="52"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="パスワード" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8og-i4-Do4" customClass="BorderBottomTextField" customModule="AdditionalTraining" customModuleProvider="target">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="パスワード" textAlignment="natural" minimumFontSize="17" clearButtonMode="unlessEditing" translatesAutoresizingMaskIntoConstraints="NO" id="8og-i4-Do4" customClass="BorderBottomTextField" customModule="AdditionalTraining" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="318" height="32"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="32" id="mcM-J9-hxj"/>
@@ -69,7 +69,7 @@
                                             </label>
                                         </subviews>
                                     </stackView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UQU-b3-ziY" customClass="IBDesignableButton" customModule="AdditionalTraining" customModuleProvider="target">
+                                    <button opaque="NO" alpha="0.5" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UQU-b3-ziY" customClass="IBDesignableButton" customModule="AdditionalTraining" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="168" width="318" height="48"/>
                                         <color key="backgroundColor" systemColor="systemBlueColor"/>
                                         <constraints>

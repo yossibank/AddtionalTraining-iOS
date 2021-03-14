@@ -12,7 +12,23 @@ final class LoginViewModel {
     @Published var email: String = .blank
     @Published var password: String = .blank
 
+    var validationEmailText: String? {
+        EmailValidator.validate(email).errorDescription
+    }
+
+    var validationPasswordText: String? {
+        PasswordValidator.validate(password).errorDescription
+    }
+
     private var cancellables: Set<AnyCancellable> = .init()
+
+    func isValidate() -> Bool {
+        let results = [
+            EmailValidator.validate(email).isValid,
+            PasswordValidator.validate(password).isValid
+        ]
+        return results.allSatisfy { $0 }
+    }
 
     func login() {
         LoginRequest()
