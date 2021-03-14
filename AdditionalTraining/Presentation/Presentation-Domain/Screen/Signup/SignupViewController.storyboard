@@ -23,7 +23,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="eEd-HK-vKx">
                                         <rect key="frame" x="0.0" y="0.0" width="318" height="52"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="メールアドレス" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gFE-IZ-9RE" customClass="BorderBottomTextField" customModule="AdditionalTraining" customModuleProvider="target">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="メールアドレス" textAlignment="natural" minimumFontSize="17" clearButtonMode="unlessEditing" translatesAutoresizingMaskIntoConstraints="NO" id="gFE-IZ-9RE" customClass="BorderBottomTextField" customModule="AdditionalTraining" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="318" height="32"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="32" id="8Pm-0A-ZtX"/>
@@ -45,7 +45,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="wAA-LS-7vz">
                                         <rect key="frame" x="0.0" y="80" width="318" height="52"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="パスワード" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XVI-e9-QoI" customClass="BorderBottomTextField" customModule="AdditionalTraining" customModuleProvider="target">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="パスワード" textAlignment="natural" minimumFontSize="17" clearButtonMode="unlessEditing" translatesAutoresizingMaskIntoConstraints="NO" id="XVI-e9-QoI" customClass="BorderBottomTextField" customModule="AdditionalTraining" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="318" height="32"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="32" id="nJd-Ow-t6N"/>
@@ -67,7 +67,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="z9e-Q7-ckR">
                                         <rect key="frame" x="0.0" y="160" width="318" height="52"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="パスワード確認" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VoQ-0o-v35" customClass="BorderBottomTextField" customModule="AdditionalTraining" customModuleProvider="target">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="パスワード確認" textAlignment="natural" minimumFontSize="17" clearButtonMode="unlessEditing" translatesAutoresizingMaskIntoConstraints="NO" id="VoQ-0o-v35" customClass="BorderBottomTextField" customModule="AdditionalTraining" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="318" height="32"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="32" id="9hb-1h-Mb2"/>
@@ -86,7 +86,7 @@
                                             </label>
                                         </subviews>
                                     </stackView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fnh-z6-LEY" customClass="IBDesignableButton" customModule="AdditionalTraining" customModuleProvider="target">
+                                    <button opaque="NO" alpha="0.5" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fnh-z6-LEY" customClass="IBDesignableButton" customModule="AdditionalTraining" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="240" width="318" height="48"/>
                                         <color key="backgroundColor" systemColor="systemPinkColor"/>
                                         <constraints>
@@ -101,6 +101,9 @@
                                                 <real key="value" value="12"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="showBookListScreen:" destination="08g-lH-Pcw" eventType="touchUpInside" id="I7Y-Lg-Ols"/>
+                                        </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="WBC-HS-oEM">
                                         <rect key="frame" x="0.0" y="316" width="318" height="32"/>

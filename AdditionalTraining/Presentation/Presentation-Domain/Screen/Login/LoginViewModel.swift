@@ -30,6 +30,12 @@ final class LoginViewModel {
         return results.allSatisfy { $0 }
     }
 
+    func shouldEnabledButton() -> Bool {
+        !(email.isEmpty || password.isEmpty)
+            && validationEmailText == nil
+            && validationPasswordText == nil
+    }
+
     func login() {
         LoginRequest()
             .request(.init(email: email, password: password))

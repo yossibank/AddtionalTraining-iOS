@@ -23,11 +23,17 @@ final class SignupViewController: UIViewController {
 
     private let router: RouterProtocol = Router()
 
+    private var viewModel: SignupViewModel!
     private var cancellables: Set<AnyCancellable> = .init()
 
-    static func createInstance() -> SignupViewController {
+    static func createInstance(viewModel: SignupViewModel) -> SignupViewController {
         let instance = SignupViewController.instantiateInitialViewController()
+        instance.viewModel = viewModel
         return instance
+    }
+
+    @IBAction private func showBookListScreen(_ sender: Any) {
+        
     }
 
     @IBAction private func showLoginScreen(_ sender: Any) {
@@ -38,6 +44,7 @@ final class SignupViewController: UIViewController {
         super.viewDidLoad()
         listenerKeyboard(keyboardNotifier: keyboardNotifier)
         bindValue()
+        bindViewModel()
     }
 }
 
@@ -45,36 +52,60 @@ extension SignupViewController {
 
     private func bindValue() {
         emailTextField.textDidChnagePublisher
-            .debounce(for: 0.5, scheduler: RunLoop.main)
-            .sink { [weak self] text in
-                guard let self = self else { return }
-
-                let validationText = EmailValidator.validate(text).errorDescription
-                self.validateEmailLabel.text = (validationText ?? .blank).isEmpty ? .blank : validationText
-            }
+            .receive(on: RunLoop.main)
+            .assign(to: \.email, on: viewModel)
             .store(in: &cancellables)
 
         passwordTextField.textDidChnagePublisher
-            .debounce(for: 0.5, scheduler: RunLoop.main)
-            .sink { [weak self] text in
+            .receive(on: RunLoop.main)
+            .assign(to: \.password, on: viewModel)
+            .store(in: &cancellables)
+
+        confimPasswordTextField.textDidChnagePublisher
+            .receive(on: RunLoop.main)
+            .assign(to: \.confirmPassword, on: viewModel)
+            .store(in: &cancellables)
+    }
+
+    private func bindViewModel() {
+        viewModel.$email
+            .debounce(for: 0.3, scheduler: RunLoop.main)
+            .dropFirst()
+            .sink { [weak self] _ in
                 guard let self = self else { return }
 
-                let validationText = PasswordValidator.validate(text).errorDescription
-                self.validatePasswordLabel.text = (validationText ?? .blank).isEmpty ? .blank : validationText
+                self.validateEmailLabel.text = self.viewModel.validationEmailText
             }
             .store(in: &cancellables)
 
-        passwordTextField.textDidChnagePublisher
-            .combineLatest(confimPasswordTextField.textDidChnagePublisher)
-            .debounce(for: 0.5, scheduler: RunLoop.main)
-            .sink { [weak self] passwordText, confirmPasswordText in
+        viewModel.$password
+            .debounce(for: 0.3, scheduler: RunLoop.main)
+            .dropFirst()
+            .sink { [weak self] _ in
                 guard let self = self else { return }
 
-                let validationText = passwordText == confirmPasswordText
-                    ? .blank
-                    : Resources.Strings.Validation.notMatchingPassword
+                self.validatePasswordLabel.text = self.viewModel.validationPasswordText
+            }
+            .store(in: &cancellables)
 
-                self.validateConfirmPasswordLabel.text = validationText
+        viewModel.$confirmPassword
+            .debounce(for: 0.3, scheduler: RunLoop.main)
+            .sink { [weak self] _ in
+                guard let self = self else { return }
+
+                self.validateConfirmPasswordLabel.text = self.viewModel.validationConfirmPasswordText
+            }
+            .store(in: &cancellables)
+
+        Publishers
+            .CombineLatest3(viewModel.$email, viewModel.$password, viewModel.$confirmPassword)
+            .debounce(for: 0.3, scheduler: RunLoop.main)
+            .map { _ in self.viewModel.shouldEnabledButton() }
+            .sink { [weak self] isEnabled in
+                guard let self = self else { return }
+
+                self.signupButton.alpha = isEnabled ? 1.0 : 0.5
+                self.signupButton.isEnabled = isEnabled
             }
             .store(in: &cancellables)
     }

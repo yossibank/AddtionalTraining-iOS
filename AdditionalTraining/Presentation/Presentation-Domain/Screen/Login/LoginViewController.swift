@@ -66,7 +66,7 @@ extension LoginViewController {
         viewModel.$email
             .debounce(for: 0.3, scheduler: RunLoop.main)
             .dropFirst()
-            .sink { [weak self] text in
+            .sink { [weak self] _ in
                 guard let self = self else { return }
 
                 self.validateEmailLabel.text = self.viewModel.validationEmailText
@@ -76,21 +76,17 @@ extension LoginViewController {
         viewModel.$password
             .debounce(for: 0.3, scheduler: RunLoop.main)
             .dropFirst()
-            .sink { [weak self] text in
+            .sink { [weak self] _ in
                 guard let self = self else { return }
 
                 self.validatePasswordLabel.text = self.viewModel.validationPasswordText
             }
             .store(in: &cancellables)
-        
+
         Publishers
             .CombineLatest(viewModel.$email, viewModel.$password)
             .debounce(for: 0.3, scheduler: RunLoop.main)
-            .map { emailText, passwordText in
-                return !(emailText.isEmpty || passwordText.isEmpty)
-                    && self.viewModel.validationEmailText == nil
-                    && self.viewModel.validationPasswordText == nil
-            }
+            .map { _ in self.viewModel.shouldEnabledButton() }
             .sink { [weak self] isEnabled in
                 guard let self = self else { return }
 
