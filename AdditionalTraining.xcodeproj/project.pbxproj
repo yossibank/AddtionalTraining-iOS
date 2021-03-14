@@ -28,6 +28,8 @@
 		7848C3DD25FDDD530066FD9B /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7848C3DC25FDDD530066FD9B /* APIError.swift */; };
 		7848C3E225FDE32D0066FD9B /* BaseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7848C3E125FDE32D0066FD9B /* BaseRequest.swift */; };
 		7848C3E725FDE5200066FD9B /* AppConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7848C3E625FDE5200066FD9B /* AppConfigurator.swift */; };
+		7848C3F425FDEF970066FD9B /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7848C3F325FDEF970066FD9B /* LoginResponse.swift */; };
+		7848C3F925FDEFE80066FD9B /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7848C3F825FDEFE80066FD9B /* LoginRequest.swift */; };
 		7852FB3F25FCDA1C000438CD /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7852FB3E25FCDA1C000438CD /* Validator.swift */; };
 		7852FB4525FCDADA000438CD /* EmailValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7852FB4425FCDADA000438CD /* EmailValidator.swift */; };
 		7852FB4E25FCDE98000438CD /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7852FB4D25FCDE98000438CD /* UITextField+Extension.swift */; };
@@ -92,6 +94,8 @@
 		7848C3DC25FDDD530066FD9B /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		7848C3E125FDE32D0066FD9B /* BaseRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRequest.swift; sourceTree = "<group>"; };
 		7848C3E625FDE5200066FD9B /* AppConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfigurator.swift; sourceTree = "<group>"; };
+		7848C3F325FDEF970066FD9B /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
+		7848C3F825FDEFE80066FD9B /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
 		7852FB3E25FCDA1C000438CD /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
 		7852FB4425FCDADA000438CD /* EmailValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidator.swift; sourceTree = "<group>"; };
 		7852FB4D25FCDE98000438CD /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
@@ -232,6 +236,7 @@
 		7848C3D225FDDD1A0066FD9B /* Request */ = {
 			isa = PBXGroup;
 			children = (
+				7848C3F825FDEFE80066FD9B /* LoginRequest.swift */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -239,6 +244,7 @@
 		7848C3D325FDDD240066FD9B /* Response */ = {
 			isa = PBXGroup;
 			children = (
+				7848C3F325FDEF970066FD9B /* LoginResponse.swift */,
 			);
 			path = Response;
 			sourceTree = "<group>";
@@ -764,12 +770,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7848C3F925FDEFE80066FD9B /* LoginRequest.swift in Sources */,
 				7852FB4E25FCDE98000438CD /* UITextField+Extension.swift in Sources */,
 				7848C3E725FDE5200066FD9B /* AppConfigurator.swift in Sources */,
 				782CDA2325FC8E9F00DD468C /* MainNavigationController.swift in Sources */,
 				782CDA0425FC827400DD468C /* IBDesignableTextField.swift in Sources */,
 				782CDA3025FC92C500DD468C /* Router.swift in Sources */,
 				7848C3D525FDDD4C0066FD9B /* HttpMethod.swift in Sources */,
+				7848C3F425FDEF970066FD9B /* LoginResponse.swift in Sources */,
 				78A9230F25FCAB5E00516F3A /* AppStrings.swift in Sources */,
 				782CD9EE25FC7D8000DD468C /* UIView-IBInspectable+Extension.swift in Sources */,
 				782CDA3525FC939200DD468C /* ViewController.swift in Sources */,
