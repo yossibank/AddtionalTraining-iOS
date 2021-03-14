@@ -27,7 +27,7 @@ enum APIError: Error {
         case .emptyResponse:
             return "レスポンスエラー"
 
-        case .decode
+        case .decode:
             return "デコードエラー"
 
         case .http(let status):

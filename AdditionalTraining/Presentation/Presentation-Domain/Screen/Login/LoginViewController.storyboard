@@ -84,6 +84,9 @@
                                                 <real key="value" value="12"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="showBookListScreen:" destination="BqW-zc-zv6" eventType="touchUpInside" id="zUp-UO-FkM"/>
+                                        </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="qiu-m5-mLY">
                                         <rect key="frame" x="0.0" y="248" width="318" height="32"/>

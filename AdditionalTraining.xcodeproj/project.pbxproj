@@ -30,6 +30,7 @@
 		7848C3E725FDE5200066FD9B /* AppConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7848C3E625FDE5200066FD9B /* AppConfigurator.swift */; };
 		7848C3F425FDEF970066FD9B /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7848C3F325FDEF970066FD9B /* LoginResponse.swift */; };
 		7848C3F925FDEFE80066FD9B /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7848C3F825FDEFE80066FD9B /* LoginRequest.swift */; };
+		7848C3FE25FDF1B40066FD9B /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7848C3FD25FDF1B40066FD9B /* LoginViewModel.swift */; };
 		7852FB3F25FCDA1C000438CD /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7852FB3E25FCDA1C000438CD /* Validator.swift */; };
 		7852FB4525FCDADA000438CD /* EmailValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7852FB4425FCDADA000438CD /* EmailValidator.swift */; };
 		7852FB4E25FCDE98000438CD /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7852FB4D25FCDE98000438CD /* UITextField+Extension.swift */; };
@@ -96,6 +97,7 @@
 		7848C3E625FDE5200066FD9B /* AppConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfigurator.swift; sourceTree = "<group>"; };
 		7848C3F325FDEF970066FD9B /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
 		7848C3F825FDEFE80066FD9B /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
+		7848C3FD25FDF1B40066FD9B /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		7852FB3E25FCDA1C000438CD /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
 		7852FB4425FCDADA000438CD /* EmailValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidator.swift; sourceTree = "<group>"; };
 		7852FB4D25FCDE98000438CD /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
@@ -187,6 +189,7 @@
 		782CD9BC25FC6FD000DD468C /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				7848C3FD25FDF1B40066FD9B /* LoginViewModel.swift */,
 				782CD9DD25FC70FF00DD468C /* LoginViewController.swift */,
 				782CD9D825FC70B600DD468C /* LoginViewController.storyboard */,
 			);
@@ -790,6 +793,7 @@
 				78BCFD6F25F31562003618CE /* AppDelegate.swift in Sources */,
 				782CDA3A25FC93C400DD468C /* AppResources.swift in Sources */,
 				78DF93E225FCECE600C50A29 /* Stirng+Util.swift in Sources */,
+				7848C3FE25FDF1B40066FD9B /* LoginViewModel.swift in Sources */,
 				7852FB4525FCDADA000438CD /* EmailValidator.swift in Sources */,
 				782CDA4125FC948A00DD468C /* ResourcesSupport.swift in Sources */,
 				7852FB3F25FCDA1C000438CD /* Validator.swift in Sources */,

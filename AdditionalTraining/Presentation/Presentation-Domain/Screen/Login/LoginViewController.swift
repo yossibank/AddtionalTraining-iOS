@@ -21,11 +21,17 @@ final class LoginViewController: UIViewController {
 
     private let router: RouterProtocol = Router()
 
+    private var viewModel: LoginViewModel!
     private var cancellables: Set<AnyCancellable> = .init()
 
-    static func createInstance() -> LoginViewController {
+    static func createInstance(viewModel: LoginViewModel) -> LoginViewController {
         let instance = LoginViewController.instantiateInitialViewController()
+        instance.viewModel = viewModel
         return instance
+    }
+
+    @IBAction private func showBookListScreen(_ sender: Any) {
+        viewModel.login()
     }
 
     @IBAction private func showSignupScreen(_ sender: Any) {
@@ -42,6 +48,16 @@ final class LoginViewController: UIViewController {
 extension LoginViewController {
 
     private func bindValue() {
+        emailTextField.textDidChnagePublisher
+            .receive(on: RunLoop.main)
+            .assign(to: \.email, on: viewModel)
+            .store(in: &cancellables)
+
+        passwordTextField.textDidChnagePublisher
+            .receive(on: RunLoop.main)
+            .assign(to: \.password, on: viewModel)
+            .store(in: &cancellables)
+
         emailTextField.textDidChnagePublisher
             .debounce(for: 0.5, scheduler: RunLoop.main)
             .sink { [weak self] text in
