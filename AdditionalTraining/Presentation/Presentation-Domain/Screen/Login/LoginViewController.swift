@@ -42,6 +42,7 @@ final class LoginViewController: UIViewController {
         super.viewDidLoad()
         listenerKeyboard(keyboardNotifier: keyboardNotifier)
         bindValue()
+        bindViewModel()
     }
 }
 
@@ -57,9 +58,12 @@ extension LoginViewController {
             .receive(on: RunLoop.main)
             .assign(to: \.password, on: viewModel)
             .store(in: &cancellables)
+    }
 
-        emailTextField.textDidChnagePublisher
+    private func bindViewModel() {
+        viewModel.$email
             .debounce(for: 0.5, scheduler: RunLoop.main)
+            .dropFirst()
             .sink { [weak self] text in
                 guard let self = self else { return }
 
@@ -68,8 +72,9 @@ extension LoginViewController {
             }
             .store(in: &cancellables)
 
-        passwordTextField.textDidChnagePublisher
+        viewModel.$password
             .debounce(for: 0.5, scheduler: RunLoop.main)
+            .dropFirst()
             .sink { [weak self] text in
                 guard let self = self else { return }
 
