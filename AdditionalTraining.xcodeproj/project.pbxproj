@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		16BFF8BB8FFF24F928343CF4 /* Pods_AdditionalTrainingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 391DC4E6E713D6F091D20D64 /* Pods_AdditionalTrainingTests.framework */; };
 		5FD2EC3C28C9E29A7E5A6B3E /* Pods_AdditionalTraining.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DBB404AEFDD58F043891F23 /* Pods_AdditionalTraining.framework */; };
+		7820639E25FE135200D67BDA /* SignupResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7820639D25FE135200D67BDA /* SignupResponse.swift */; };
+		782063A625FE138500D67BDA /* SignupRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782063A525FE138500D67BDA /* SignupRequest.swift */; };
 		782CD9BE25FC6FF900DD468C /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782CD9BD25FC6FF900DD468C /* SignupViewController.swift */; };
 		782CD9C625FC700C00DD468C /* SignupViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 782CD9C525FC700C00DD468C /* SignupViewController.storyboard */; };
 		782CD9D925FC70B600DD468C /* LoginViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 782CD9D825FC70B600DD468C /* LoginViewController.storyboard */; };
@@ -78,6 +80,8 @@
 		5A095CB50E35B07D1FDE946B /* Pods-AddtionalTraining-iOS-AddtionalTraining-iOSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AddtionalTraining-iOS-AddtionalTraining-iOSUITests.release.xcconfig"; path = "Target Support Files/Pods-AddtionalTraining-iOS-AddtionalTraining-iOSUITests/Pods-AddtionalTraining-iOS-AddtionalTraining-iOSUITests.release.xcconfig"; sourceTree = "<group>"; };
 		739F3C356281ACF245220B97 /* Pods-AdditionalTrainingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdditionalTrainingTests.release.xcconfig"; path = "Target Support Files/Pods-AdditionalTrainingTests/Pods-AdditionalTrainingTests.release.xcconfig"; sourceTree = "<group>"; };
 		740DC16349C2EA12AEB5AEAB /* Pods-AdditionalTraining-iOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdditionalTraining-iOSTests.release.xcconfig"; path = "Target Support Files/Pods-AdditionalTraining-iOSTests/Pods-AdditionalTraining-iOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		7820639D25FE135200D67BDA /* SignupResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupResponse.swift; sourceTree = "<group>"; };
+		782063A525FE138500D67BDA /* SignupRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupRequest.swift; sourceTree = "<group>"; };
 		782CD9BD25FC6FF900DD468C /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		782CD9C525FC700C00DD468C /* SignupViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignupViewController.storyboard; sourceTree = "<group>"; };
 		782CD9D825FC70B600DD468C /* LoginViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginViewController.storyboard; sourceTree = "<group>"; };
@@ -244,6 +248,7 @@
 		7848C3D225FDDD1A0066FD9B /* Request */ = {
 			isa = PBXGroup;
 			children = (
+				782063A525FE138500D67BDA /* SignupRequest.swift */,
 				7848C3F825FDEFE80066FD9B /* LoginRequest.swift */,
 			);
 			path = Request;
@@ -252,6 +257,7 @@
 		7848C3D325FDDD240066FD9B /* Response */ = {
 			isa = PBXGroup;
 			children = (
+				7820639D25FE135200D67BDA /* SignupResponse.swift */,
 				7848C3F325FDEF970066FD9B /* LoginResponse.swift */,
 			);
 			path = Response;
@@ -800,6 +806,7 @@
 				782CD9EE25FC7D8000DD468C /* UIView-IBInspectable+Extension.swift in Sources */,
 				782CDA3525FC939200DD468C /* ViewController.swift in Sources */,
 				7848C3E225FDE32D0066FD9B /* BaseRequest.swift in Sources */,
+				782063A625FE138500D67BDA /* SignupRequest.swift in Sources */,
 				7848C3CD25FDC59E0066FD9B /* PasswordValidator.swift in Sources */,
 				782CD9F725FC812F00DD468C /* IBDesignableView.swift in Sources */,
 				78EBF08E25FC6BF200613185 /* R.generated.swift in Sources */,
@@ -812,6 +819,7 @@
 				7852FB4525FCDADA000438CD /* EmailValidator.swift in Sources */,
 				782CDA4125FC948A00DD468C /* ResourcesSupport.swift in Sources */,
 				7852FB3F25FCDA1C000438CD /* Validator.swift in Sources */,
+				7820639E25FE135200D67BDA /* SignupResponse.swift in Sources */,
 				782CD9DE25FC70FF00DD468C /* LoginViewController.swift in Sources */,
 				78A9231C25FCB0BD00516F3A /* KeyboardNotfier.swift in Sources */,
 				78A922FA25FCA97500516F3A /* NavigationBarConfiguration.swift in Sources */,
