@@ -9,6 +9,7 @@
 // MARK: - アプリケーション
 "email_address" = "メールアドレス";
 "password" = "パスワード";
+"confirm_password" = "パスワード確認";
 
 // MARK: - ナビゲーション
 "signup" = "サインアップ";

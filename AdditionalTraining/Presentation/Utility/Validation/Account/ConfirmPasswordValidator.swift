@@ -16,6 +16,10 @@ enum ConfirmPasswordValidator: ValidatorProtocol {
         _ password: String,
         _ confirmPassword: String
     ) -> ValidationResult<ConfirmPasswordError> {
+        if confirmPassword.isEmpty {
+            return .invalid(.empty)
+        }
+
         if password != confirmPassword {
             return .invalid(.notMatch)
         }
@@ -49,7 +53,7 @@ enum ConfirmPasswordError: LocalizedError {
         switch self {
 
         case .empty:
-            return Resources.Strings.Validation.emptyPassword
+            return Resources.Strings.Validation.emptyConfirmPassword
 
         case .tooShort:
             return Resources.Strings.Validation.invalidLengthPassword

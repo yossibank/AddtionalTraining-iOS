@@ -20,14 +20,20 @@ enum EmailValidator: ValidatorProtocol {
             return .invalid(.empty)
         }
 
-        let format = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
-        let isValidEmail = NSPredicate(
-            format: "SELF MATCHES %@",
-            format
-        ).evaluate(with: value)
+        do {
+            let format = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
+            let isValidEmail = try NSRegularExpression(pattern: format, options: [])
+            let matches = isValidEmail.matches(
+                in: value,
+                options: [],
+                range: .init(location: 0, length: value.count)
+            )
 
-        if !isValidEmail {
-            return .invalid(.format)
+            if matches.isEmpty {
+                return .invalid(.format)
+            }
+        } catch {
+            print("ERROR: \(error.localizedDescription)")
         }
 
         return .valid

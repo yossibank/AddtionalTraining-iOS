@@ -92,6 +92,7 @@ extension SignupViewController {
 
         viewModel.$confirmPassword
             .debounce(for: 0.3, scheduler: RunLoop.main)
+            .dropFirst()
             .sink { [weak self] _ in
                 guard let self = self else { return }
 

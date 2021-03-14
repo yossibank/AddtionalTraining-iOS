@@ -12,6 +12,7 @@ struct StringResources {
     struct App {
         static var emailAddress: String { Internal.localizable.email_address() }
         static var password: String { Internal.localizable.password() }
+        static var confirmPassword: String { Internal.localizable.confirm_password() }
     }
 
     struct Naviagtion {
@@ -24,6 +25,7 @@ struct StringResources {
 
         static var emptyEmailAddress: String { Internal.localizable.not_filled(Resources.Strings.App.emailAddress) }
         static var emptyPassword: String { Internal.localizable.not_filled(Resources.Strings.App.password) }
+        static var emptyConfirmPassword: String { Internal.localizable.not_filled(Resources.Strings.App.confirmPassword) }
         static var invalidEmailFormat: String { Internal.localizable.not_correct_email_format() }
         static var invalidLengthPassword: String { Internal.localizable.not_length_password(minimumLength) }
         static var notMatchingPassword: String { Internal.localizable.not_matching_password() }
