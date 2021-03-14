@@ -11,6 +11,7 @@ struct StringResources {
 
     struct App {
         static var emailAddress: String { Internal.localizable.email_address() }
+        static var password: String { Internal.localizable.password() }
     }
 
     struct Naviagtion {
@@ -19,7 +20,11 @@ struct StringResources {
     }
 
     struct Validation {
+        private static let minimumLength = "6"
+
         static var emptyEmailAddress: String { Internal.localizable.not_filled(Resources.Strings.App.emailAddress) }
+        static var emptyPassword: String { Internal.localizable.not_filled(Resources.Strings.App.password) }
         static var invalidEmailFormat: String { Internal.localizable.not_correct_email_format() }
+        static var invalidLengthPassword: String { Internal.localizable.not_length_password(minimumLength) }
     }
 }

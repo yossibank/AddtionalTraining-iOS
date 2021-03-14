@@ -18,10 +18,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="xd1-ey-P0m">
-                                <rect key="frame" x="48" y="304" width="318" height="288"/>
+                                <rect key="frame" x="48" y="308" width="318" height="280"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ZAl-Ga-X3B">
-                                        <rect key="frame" x="0.0" y="0.0" width="318" height="56"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="ZAl-Ga-X3B">
+                                        <rect key="frame" x="0.0" y="0.0" width="318" height="52"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="メールアドレス" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gfG-Xe-I6Y" customClass="BorderBottomTextField" customModule="AdditionalTraining" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="318" height="32"/>
@@ -29,7 +29,7 @@
                                                     <constraint firstAttribute="height" constant="32" id="uvg-r0-Cuf"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
                                                         <real key="value" value="0.0"/>
@@ -37,18 +37,18 @@
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FTd-Es-7Di">
-                                                <rect key="frame" x="0.0" y="40" width="318" height="16"/>
+                                                <rect key="frame" x="0.0" y="36" width="318" height="16"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="16" id="JBX-Qe-tmf"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
                                                 <color key="textColor" systemColor="systemRedColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="LUB-HU-o5i">
-                                        <rect key="frame" x="0.0" y="88" width="318" height="56"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="LUB-HU-o5i">
+                                        <rect key="frame" x="0.0" y="84" width="318" height="52"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="パスワード" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8og-i4-Do4" customClass="BorderBottomTextField" customModule="AdditionalTraining" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="318" height="32"/>
@@ -56,21 +56,21 @@
                                                     <constraint firstAttribute="height" constant="32" id="mcM-J9-hxj"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rvv-Yy-z0x">
-                                                <rect key="frame" x="0.0" y="40" width="318" height="16"/>
+                                                <rect key="frame" x="0.0" y="36" width="318" height="16"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="16" id="VIT-aM-ER3"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
                                                 <color key="textColor" systemColor="systemRedColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UQU-b3-ziY" customClass="IBDesignableButton" customModule="AdditionalTraining" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="176" width="318" height="48"/>
+                                        <rect key="frame" x="0.0" y="168" width="318" height="48"/>
                                         <color key="backgroundColor" systemColor="systemBlueColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="tl6-57-dHa"/>
@@ -86,7 +86,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="qiu-m5-mLY">
-                                        <rect key="frame" x="0.0" y="256" width="318" height="32"/>
+                                        <rect key="frame" x="0.0" y="248" width="318" height="32"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hqa-8F-fUt">
                                                 <rect key="frame" x="158" y="0.0" width="160" height="32"/>
@@ -128,7 +128,7 @@
     </scenes>
     <designables>
         <designable name="8og-i4-Do4">
-            <size key="intrinsicContentSize" width="82" height="21"/>
+            <size key="intrinsicContentSize" width="82" height="20"/>
         </designable>
         <designable name="UQU-b3-ziY">
             <size key="intrinsicContentSize" width="66" height="32"/>

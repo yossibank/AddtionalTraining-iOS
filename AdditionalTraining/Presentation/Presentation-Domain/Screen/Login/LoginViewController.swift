@@ -51,6 +51,16 @@ extension LoginViewController {
                 self.validateEmailLabel.text = (validationText ?? .blank).isEmpty ? .blank : validationText
             }
             .store(in: &cancellables)
+
+        passwordTextField.textDidChnagePublisher
+            .debounce(for: 0.5, scheduler: RunLoop.main)
+            .sink { [weak self] text in
+                guard let self = self else { return }
+
+                let validationText = PasswordValidator.validate(text).errorDescription
+                self.validatePasswordLabel.text = (validationText ?? .blank).isEmpty ? .blank : validationText
+            }
+            .store(in: &cancellables)
     }
 }
 

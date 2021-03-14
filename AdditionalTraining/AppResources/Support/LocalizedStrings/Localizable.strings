@@ -8,6 +8,7 @@
 
 // MARK: - アプリケーション
 "email_address" = "メールアドレス";
+"password" = "パスワード";
 
 // MARK: - ナビゲーション
 "signup" = "サインアップ";
@@ -16,3 +17,4 @@
 // MARK: - バリデーションメッセージ
 "not_filled" = "%@が入力されていません";
 "not_correct_email_format" = "メールアドレスが正しいフォームで入力されていません";
+"not_length_password" = "パスワードは%@文字以上でご入力ください";

@@ -18,10 +18,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="Um2-VI-dft">
-                                <rect key="frame" x="48" y="268" width="318" height="360"/>
+                                <rect key="frame" x="48" y="274" width="318" height="348"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="eEd-HK-vKx">
-                                        <rect key="frame" x="0.0" y="0.0" width="318" height="56"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="eEd-HK-vKx">
+                                        <rect key="frame" x="0.0" y="0.0" width="318" height="52"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="メールアドレス" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gFE-IZ-9RE" customClass="BorderBottomTextField" customModule="AdditionalTraining" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="318" height="32"/>
@@ -29,21 +29,21 @@
                                                     <constraint firstAttribute="height" constant="32" id="8Pm-0A-ZtX"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dBd-hg-tMY">
-                                                <rect key="frame" x="0.0" y="40" width="318" height="16"/>
+                                                <rect key="frame" x="0.0" y="36" width="318" height="16"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="16" id="adE-0r-MBh"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
                                                 <color key="textColor" systemColor="systemRedColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="wAA-LS-7vz">
-                                        <rect key="frame" x="0.0" y="84" width="318" height="56"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="wAA-LS-7vz">
+                                        <rect key="frame" x="0.0" y="80" width="318" height="52"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="パスワード" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XVI-e9-QoI" customClass="BorderBottomTextField" customModule="AdditionalTraining" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="318" height="32"/>
@@ -51,21 +51,21 @@
                                                     <constraint firstAttribute="height" constant="32" id="nJd-Ow-t6N"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qtb-3V-R5I">
-                                                <rect key="frame" x="0.0" y="40" width="318" height="16"/>
+                                                <rect key="frame" x="0.0" y="36" width="318" height="16"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="16" id="J2D-6F-7Cc"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
                                                 <color key="textColor" systemColor="systemRedColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="z9e-Q7-ckR">
-                                        <rect key="frame" x="0.0" y="168" width="318" height="56"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="z9e-Q7-ckR">
+                                        <rect key="frame" x="0.0" y="160" width="318" height="52"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="パスワード確認" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VoQ-0o-v35" customClass="BorderBottomTextField" customModule="AdditionalTraining" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="318" height="32"/>
@@ -73,21 +73,21 @@
                                                     <constraint firstAttribute="height" constant="32" id="9hb-1h-Mb2"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pf9-J0-HnJ">
-                                                <rect key="frame" x="0.0" y="40" width="318" height="16"/>
+                                                <rect key="frame" x="0.0" y="36" width="318" height="16"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="16" id="XLM-U2-A7r"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
                                                 <color key="textColor" systemColor="systemRedColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fnh-z6-LEY" customClass="IBDesignableButton" customModule="AdditionalTraining" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="252" width="318" height="48"/>
+                                        <rect key="frame" x="0.0" y="240" width="318" height="48"/>
                                         <color key="backgroundColor" systemColor="systemPinkColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="idk-um-GFG"/>
@@ -103,15 +103,15 @@
                                         </userDefinedRuntimeAttributes>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="WBC-HS-oEM">
-                                        <rect key="frame" x="0.0" y="328" width="318" height="32"/>
+                                        <rect key="frame" x="0.0" y="316" width="318" height="32"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yDb-4v-8yd">
-                                                <rect key="frame" x="238" y="0.0" width="80" height="32"/>
+                                                <rect key="frame" x="218" y="0.0" width="100" height="32"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="80" id="7fD-hM-3YV"/>
+                                                    <constraint firstAttribute="width" constant="100" id="7fD-hM-3YV"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
-                                                <state key="normal" title="ログイン"/>
+                                                <state key="normal" title="ログインする"/>
                                                 <connections>
                                                     <action selector="showLoginScreen:" destination="08g-lH-Pcw" eventType="touchUpInside" id="xtg-DM-ZG6"/>
                                                 </connections>
@@ -150,10 +150,10 @@
             <size key="intrinsicContentSize" width="115" height="32"/>
         </designable>
         <designable name="VoQ-0o-v35">
-            <size key="intrinsicContentSize" width="114.5" height="21"/>
+            <size key="intrinsicContentSize" width="114.5" height="20"/>
         </designable>
         <designable name="XVI-e9-QoI">
-            <size key="intrinsicContentSize" width="82" height="21"/>
+            <size key="intrinsicContentSize" width="82" height="20"/>
         </designable>
         <designable name="gFE-IZ-9RE">
             <size key="intrinsicContentSize" width="114.5" height="21"/>
