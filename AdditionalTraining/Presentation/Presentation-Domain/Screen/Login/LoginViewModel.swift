@@ -11,6 +11,7 @@ final class LoginViewModel {
 
     @Published var email: String = .blank
     @Published var password: String = .blank
+    @Published private(set) var newWorkState: NetworkState = .standby
 
     var validationEmailText: String? {
         EmailValidator.validate(email).errorDescription
@@ -37,14 +38,21 @@ final class LoginViewModel {
     }
 
     func login() {
+        newWorkState = .loading
+
         LoginRequest()
             .request(.init(email: email, password: password))
-            .sink(receiveCompletion: { result in
+            .sink(receiveCompletion: { [weak self] result in
+                guard let self = self else { return }
+
                 switch result {
+
                 case .finished:
-                    print("OK")
+                    self.newWorkState = .finished
+
                 case .failure(let error):
-                    print("ERROR: \(error.errorDescription)")
+                    self.newWorkState = .error(error)
+
                 }
             }, receiveValue: { response in
                 print(response.result)

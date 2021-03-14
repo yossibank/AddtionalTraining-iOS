@@ -18,6 +18,7 @@ final class SignupViewController: UIViewController {
     @IBOutlet private weak var validatePasswordLabel: UILabel!
     @IBOutlet private weak var validateConfirmPasswordLabel: UILabel!
     @IBOutlet private weak var signupButton: UIButton!
+    @IBOutlet private weak var loadingIndicator: UIActivityIndicatorView!
 
     var keyboardNotifier: KeyboardNotifier = KeyboardNotifier()
 
@@ -109,6 +110,30 @@ extension SignupViewController {
 
                 self.signupButton.alpha = isEnabled ? 1.0 : 0.5
                 self.signupButton.isEnabled = isEnabled
+            }
+            .store(in: &cancellables)
+
+        viewModel.$networkState
+            .receive(on: RunLoop.main)
+            .sink { [weak self] state in
+                guard let self = self else { return }
+
+                switch state {
+
+                case .standby: break
+
+                case .loading:
+                    self.loadingIndicator.startAnimating()
+
+                case .finished:
+                    self.loadingIndicator.stopAnimating()
+                    // TODO: show main tab controller
+
+                case .error(let error):
+                    self.loadingIndicator.stopAnimating()
+                    // TODO: show error alert
+
+                }
             }
             .store(in: &cancellables)
     }

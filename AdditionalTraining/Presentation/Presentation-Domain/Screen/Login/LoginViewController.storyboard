@@ -17,6 +17,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="Jb4-zi-Mmw">
+                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                            </activityIndicatorView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="xd1-ey-P0m">
                                 <rect key="frame" x="48" y="308" width="318" height="280"/>
                                 <subviews>
@@ -110,13 +113,16 @@
                         <viewLayoutGuide key="safeArea" id="oNg-0e-jDb"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="Jb4-zi-Mmw" firstAttribute="centerY" secondItem="BMw-fu-U61" secondAttribute="centerY" id="1g5-rQ-A3M"/>
                             <constraint firstItem="oNg-0e-jDb" firstAttribute="trailing" secondItem="xd1-ey-P0m" secondAttribute="trailing" constant="48" id="7Ha-Bt-pfL"/>
                             <constraint firstItem="xd1-ey-P0m" firstAttribute="centerY" secondItem="BMw-fu-U61" secondAttribute="centerY" id="CVK-bF-ISw"/>
+                            <constraint firstItem="Jb4-zi-Mmw" firstAttribute="centerX" secondItem="BMw-fu-U61" secondAttribute="centerX" id="FJ5-rG-pOM"/>
                             <constraint firstItem="xd1-ey-P0m" firstAttribute="leading" secondItem="oNg-0e-jDb" secondAttribute="leading" constant="48" id="cUa-iL-Yhh"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="emailTextField" destination="gfG-Xe-I6Y" id="5wL-Mf-wMq"/>
+                        <outlet property="loadingIndicator" destination="Jb4-zi-Mmw" id="l36-5v-f6E"/>
                         <outlet property="loginButton" destination="UQU-b3-ziY" id="uaf-mY-WZI"/>
                         <outlet property="passwordTextField" destination="8og-i4-Do4" id="6dB-Ra-y5h"/>
                         <outlet property="stackView" destination="xd1-ey-P0m" id="F59-px-Dyv"/>

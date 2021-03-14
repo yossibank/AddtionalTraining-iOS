@@ -12,6 +12,7 @@ final class SignupViewModel {
     @Published var email: String = .blank
     @Published var password: String = .blank
     @Published var confirmPassword: String = .blank
+    @Published var networkState: NetworkState = .standby
 
     var validationEmailText: String? {
         EmailValidator.validate(email).errorDescription
@@ -44,14 +45,21 @@ final class SignupViewModel {
     }
 
     func signup() {
+        networkState = .loading
+
         SignupRequest()
             .request(.init(email: email, password: password))
-            .sink(receiveCompletion: { result in
+            .sink(receiveCompletion: { [weak self] result in
+                guard let self = self else { return }
+
                 switch result {
+
                 case .finished:
-                    print("OK")
+                    self.networkState = .finished
+
                 case .failure(let error):
-                    print("ERROR: \(error.errorDescription)")
+                    self.networkState = .error(error)
+
                 }
             }, receiveValue: { response in
                 print(response.result)

@@ -123,11 +123,16 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="Eej-iR-s8c">
+                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="0zR-g6-6H3"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Um2-VI-dft" firstAttribute="leading" secondItem="0zR-g6-6H3" secondAttribute="leading" constant="48" id="1Q4-2Y-l14"/>
+                            <constraint firstItem="Eej-iR-s8c" firstAttribute="centerY" secondItem="d56-1p-GXv" secondAttribute="centerY" id="6at-rA-JTz"/>
+                            <constraint firstItem="Eej-iR-s8c" firstAttribute="centerX" secondItem="d56-1p-GXv" secondAttribute="centerX" id="UZR-0D-FVg"/>
                             <constraint firstItem="0zR-g6-6H3" firstAttribute="trailing" secondItem="Um2-VI-dft" secondAttribute="trailing" constant="48" id="e5H-gr-Aw1"/>
                             <constraint firstItem="Um2-VI-dft" firstAttribute="centerY" secondItem="d56-1p-GXv" secondAttribute="centerY" id="z4Z-rQ-xw7"/>
                         </constraints>
@@ -135,6 +140,7 @@
                     <connections>
                         <outlet property="confimPasswordTextField" destination="VoQ-0o-v35" id="T0I-XX-3Hj"/>
                         <outlet property="emailTextField" destination="gFE-IZ-9RE" id="WIg-rg-osc"/>
+                        <outlet property="loadingIndicator" destination="Eej-iR-s8c" id="rsM-K1-bL7"/>
                         <outlet property="passwordTextField" destination="XVI-e9-QoI" id="vSB-aX-eQi"/>
                         <outlet property="signupButton" destination="Fnh-z6-LEY" id="eI6-rj-bOT"/>
                         <outlet property="stackView" destination="Um2-VI-dft" id="1em-1v-meE"/>

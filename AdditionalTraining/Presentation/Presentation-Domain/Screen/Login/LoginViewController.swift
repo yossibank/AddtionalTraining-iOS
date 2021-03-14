@@ -16,6 +16,7 @@ final class LoginViewController: UIViewController {
     @IBOutlet private weak var validateEmailLabel: UILabel!
     @IBOutlet private weak var validatePasswordLabel: UILabel!
     @IBOutlet private weak var loginButton: UIButton!
+    @IBOutlet private weak var loadingIndicator: UIActivityIndicatorView!
 
     var keyboardNotifier: KeyboardNotifier = KeyboardNotifier()
 
@@ -92,6 +93,31 @@ extension LoginViewController {
 
                 self.loginButton.alpha = isEnabled ? 1.0 : 0.5
                 self.loginButton.isEnabled = isEnabled
+            }
+            .store(in: &cancellables)
+
+        viewModel.$newWorkState
+            .receive(on: RunLoop.main)
+            .sink { [weak self] state in
+                guard let self = self else { return }
+
+                switch state {
+
+                case .standby: break
+
+                case .loading:
+                    print("LOADING")
+                    self.loadingIndicator.startAnimating()
+
+                case .finished:
+                    self.loadingIndicator.stopAnimating()
+                    // TODO: show main tab controller
+
+                case .error(let error):
+                    self.loadingIndicator.stopAnimating()
+                    // TODO: show error alert
+
+                }
             }
             .store(in: &cancellables)
     }
