@@ -28,4 +28,8 @@ struct StringResources {
         static var invalidLengthPassword: String { Internal.localizable.not_length_password(minimumLength) }
         static var notMatchingPassword: String { Internal.localizable.not_matching_password() }
     }
+
+    struct API {
+        static var baseUrl: String { "http://54.250.239.8" }
+    }
 }
