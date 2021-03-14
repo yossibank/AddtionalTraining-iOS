@@ -41,6 +41,7 @@
 		788DC71725FE466900940B80 /* NetworkState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788DC71625FE466900940B80 /* NetworkState.swift */; };
 		788DC71F25FE4EEE00940B80 /* UIAlertController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788DC71E25FE4EEE00940B80 /* UIAlertController+Extension.swift */; };
 		788DC72725FE509400940B80 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788DC72625FE509400940B80 /* UIViewController+Extension.swift */; };
+		788DC73025FE5DA400940B80 /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788DC72F25FE5DA400940B80 /* KeychainManager.swift */; };
 		78A922FA25FCA97500516F3A /* NavigationBarConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A922F925FCA97500516F3A /* NavigationBarConfiguration.swift */; };
 		78A9230F25FCAB5E00516F3A /* AppStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A9230E25FCAB5E00516F3A /* AppStrings.swift */; };
 		78A9231425FCABB400516F3A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 78A9231325FCABB400516F3A /* Localizable.strings */; };
@@ -115,6 +116,7 @@
 		788DC71625FE466900940B80 /* NetworkState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkState.swift; sourceTree = "<group>"; };
 		788DC71E25FE4EEE00940B80 /* UIAlertController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController+Extension.swift"; sourceTree = "<group>"; };
 		788DC72625FE509400940B80 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		788DC72F25FE5DA400940B80 /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
 		78A922F925FCA97500516F3A /* NavigationBarConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarConfiguration.swift; sourceTree = "<group>"; };
 		78A9230E25FCAB5E00516F3A /* AppStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStrings.swift; sourceTree = "<group>"; };
 		78A9231325FCABB400516F3A /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
@@ -288,6 +290,14 @@
 			path = Combine;
 			sourceTree = "<group>";
 		};
+		788DC72E25FE5D9400940B80 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				788DC72F25FE5DA400940B80 /* KeychainManager.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 		78A922F825FCA93B00516F3A /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
@@ -438,6 +448,7 @@
 			isa = PBXGroup;
 			children = (
 				7848C3D125FDDD140066FD9B /* API */,
+				788DC72E25FE5D9400940B80 /* Service */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -833,6 +844,7 @@
 				7820639E25FE135200D67BDA /* SignupResponse.swift in Sources */,
 				782CD9DE25FC70FF00DD468C /* LoginViewController.swift in Sources */,
 				78A9231C25FCB0BD00516F3A /* KeyboardNotfier.swift in Sources */,
+				788DC73025FE5DA400940B80 /* KeychainManager.swift in Sources */,
 				788DC71F25FE4EEE00940B80 /* UIAlertController+Extension.swift in Sources */,
 				78A922FA25FCA97500516F3A /* NavigationBarConfiguration.swift in Sources */,
 				787EF6D125FE09B8007B7054 /* ConfirmPasswordValidator.swift in Sources */,

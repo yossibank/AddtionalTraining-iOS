@@ -62,7 +62,7 @@ final class SignupViewModel {
 
                 }
             }, receiveValue: { response in
-                print(response.result)
+                KeychainManager.shared.setToken(response.result.token)
             })
             .store(in: &cancellables)
     }
