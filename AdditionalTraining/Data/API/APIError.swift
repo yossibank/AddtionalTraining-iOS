@@ -7,31 +7,36 @@
 
 import Foundation
 
-enum APIError: Error {
-    case request
-    case network(error: Error)
-    case emptyResponse
-    case decode
-    case http(status: Int)
+enum APIError: Error, LocalizedError {
+    case unknown
+    case networkError(error: Error)
+    case httpError(httpCode: Int)
+    case invalidResponseData
+    case decodingError
+    case encodeingError
 
-    func desciption() -> String {
+    var errorDescription: String? {
 
         switch self {
 
-        case .request:
-            return "リクエストエラー"
+        case .unknown:
+            return "unknown error occured"
 
-        case .network(let error):
-            return "ネットワークエラー: \(error)"
+        case .networkError(let error):
+            return "network error occured: \(error)"
 
-        case .emptyResponse:
-            return "レスポンスエラー"
+        case .httpError(let httpCode):
+            return "HTTP error occured: \(httpCode)"
 
-        case .decode:
-            return "デコードエラー"
+        case .invalidResponseData:
+            return "invalidResponseData error occured"
 
-        case .http(let status):
-            return "ステータスエラー: \(status)"
+        case .decodingError:
+            return "decodingError error occured"
+
+        case .encodeingError:
+            return "encodingError error occured"
         }
+
     }
 }

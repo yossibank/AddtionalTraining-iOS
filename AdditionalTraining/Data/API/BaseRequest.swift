@@ -60,7 +60,7 @@ extension BaseRequest {
             return request(data)
         } catch {
             return .init() { promise in
-                promise(.failure(.request))
+                promise(.failure(.encodeingError))
             }
         }
     }
@@ -80,7 +80,7 @@ extension BaseRequest {
 
                 URLSession.shared.dataTask(with: urlRequest) { data, response, error in
                     if let error = error {
-                        promise(.failure(.network(error: error)))
+                        promise(.failure(.networkError(error: error)))
                         return
                     }
 
@@ -88,12 +88,12 @@ extension BaseRequest {
                         let data = data,
                         let response = response as? HTTPURLResponse
                     else {
-                        promise(.failure(.emptyResponse))
+                        promise(.failure(.invalidResponseData))
                         return
                     }
 
                     guard 200..<300 ~= response.statusCode else {
-                        promise(.failure(.http(status: response.statusCode)))
+                        promise(.failure(.httpError(httpCode: response.statusCode)))
                         return
                     }
 
@@ -101,12 +101,12 @@ extension BaseRequest {
                         let entity = try decoder.decode(Response.self, from: data)
                         promise(.success(entity))
                     } catch {
-                        promise(.failure(.decode))
+                        promise(.failure(.decodingError))
                     }
                 }.resume()
 
             } catch {
-                promise(.failure(.request))
+                promise(.failure(.unknown))
                 return
             }
         }

@@ -51,7 +51,7 @@ final class SignupViewModel {
                 case .finished:
                     print("OK")
                 case .failure(let error):
-                    print("ERROR: \(error.desciption())")
+                    print("ERROR: \(error.errorDescription)")
                 }
             }, receiveValue: { response in
                 print(response.result)
