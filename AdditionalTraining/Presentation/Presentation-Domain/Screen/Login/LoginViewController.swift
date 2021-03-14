@@ -106,7 +106,6 @@ extension LoginViewController {
                 case .standby: break
 
                 case .loading:
-                    print("LOADING")
                     self.loadingIndicator.startAnimating()
 
                 case .finished:
@@ -115,7 +114,7 @@ extension LoginViewController {
 
                 case .error(let error):
                     self.loadingIndicator.stopAnimating()
-                    // TODO: show error alert
+                    self.showError(error: error)
 
                 }
             }

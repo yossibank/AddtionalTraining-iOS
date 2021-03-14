@@ -15,6 +15,21 @@
 "signup" = "サインアップ";
 "login" = "ログイン";
 
+// MARK: - アラートメッセージ
+"yes" = "はい";
+"no" = "いいえ";
+"ok" = "OK";
+"error" = "エラー";
+"close" = "閉じる";
+"cancel" = "キャンセル";
+
+// MARK: - エラーメッセージ
+"unknown_error" = "不明なエラー";
+"please_check_your_input" = "ご入力内容をご確認ください";
+"forbidden_error" = "アクセスが禁止されています";
+"not_found_url_error" = "URLが存在しません";
+"server_error" = "サーバーエラー";
+
 // MARK: - バリデーションメッセージ
 "not_filled" = "%@が入力されていません";
 "not_correct_email_format" = "メールアドレスが正しいフォームで入力されていません";

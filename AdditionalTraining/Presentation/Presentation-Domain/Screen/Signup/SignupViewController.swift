@@ -131,7 +131,7 @@ extension SignupViewController {
 
                 case .error(let error):
                     self.loadingIndicator.stopAnimating()
-                    // TODO: show error alert
+                    self.showError(error: error)
 
                 }
             }

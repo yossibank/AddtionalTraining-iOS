@@ -39,6 +39,8 @@
 		787EF6BF25FE0821007B7054 /* SignupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787EF6BE25FE0820007B7054 /* SignupViewModel.swift */; };
 		787EF6D125FE09B8007B7054 /* ConfirmPasswordValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787EF6D025FE09B8007B7054 /* ConfirmPasswordValidator.swift */; };
 		788DC71725FE466900940B80 /* NetworkState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788DC71625FE466900940B80 /* NetworkState.swift */; };
+		788DC71F25FE4EEE00940B80 /* UIAlertController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788DC71E25FE4EEE00940B80 /* UIAlertController+Extension.swift */; };
+		788DC72725FE509400940B80 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788DC72625FE509400940B80 /* UIViewController+Extension.swift */; };
 		78A922FA25FCA97500516F3A /* NavigationBarConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A922F925FCA97500516F3A /* NavigationBarConfiguration.swift */; };
 		78A9230F25FCAB5E00516F3A /* AppStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A9230E25FCAB5E00516F3A /* AppStrings.swift */; };
 		78A9231425FCABB400516F3A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 78A9231325FCABB400516F3A /* Localizable.strings */; };
@@ -111,6 +113,8 @@
 		787EF6BE25FE0820007B7054 /* SignupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewModel.swift; sourceTree = "<group>"; };
 		787EF6D025FE09B8007B7054 /* ConfirmPasswordValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmPasswordValidator.swift; sourceTree = "<group>"; };
 		788DC71625FE466900940B80 /* NetworkState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkState.swift; sourceTree = "<group>"; };
+		788DC71E25FE4EEE00940B80 /* UIAlertController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController+Extension.swift"; sourceTree = "<group>"; };
+		788DC72625FE509400940B80 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		78A922F925FCA97500516F3A /* NavigationBarConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarConfiguration.swift; sourceTree = "<group>"; };
 		78A9230E25FCAB5E00516F3A /* AppStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStrings.swift; sourceTree = "<group>"; };
 		78A9231325FCABB400516F3A /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
@@ -211,6 +215,8 @@
 			isa = PBXGroup;
 			children = (
 				782CD9ED25FC7D8000DD468C /* UIView-IBInspectable+Extension.swift */,
+				788DC72625FE509400940B80 /* UIViewController+Extension.swift */,
+				788DC71E25FE4EEE00940B80 /* UIAlertController+Extension.swift */,
 				7852FB4C25FCDE86000438CD /* Combine */,
 			);
 			path = Extension;
@@ -814,6 +820,7 @@
 				782CD9F725FC812F00DD468C /* IBDesignableView.swift in Sources */,
 				78EBF08E25FC6BF200613185 /* R.generated.swift in Sources */,
 				7848C3DD25FDDD530066FD9B /* APIError.swift in Sources */,
+				788DC72725FE509400940B80 /* UIViewController+Extension.swift in Sources */,
 				788DC71725FE466900940B80 /* NetworkState.swift in Sources */,
 				782CD9FF25FC822700DD468C /* IBDesinableButton.swift in Sources */,
 				78BCFD6F25F31562003618CE /* AppDelegate.swift in Sources */,
@@ -826,6 +833,7 @@
 				7820639E25FE135200D67BDA /* SignupResponse.swift in Sources */,
 				782CD9DE25FC70FF00DD468C /* LoginViewController.swift in Sources */,
 				78A9231C25FCB0BD00516F3A /* KeyboardNotfier.swift in Sources */,
+				788DC71F25FE4EEE00940B80 /* UIAlertController+Extension.swift in Sources */,
 				78A922FA25FCA97500516F3A /* NavigationBarConfiguration.swift in Sources */,
 				787EF6D125FE09B8007B7054 /* ConfirmPasswordValidator.swift in Sources */,
 				782CD9BE25FC6FF900DD468C /* SignupViewController.swift in Sources */,

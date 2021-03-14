@@ -76,7 +76,7 @@ extension BaseRequest {
                 }
 
                 urlRequest.allHTTPHeaderFields = defaultHeaderFields.merging(headerFields) { $1 }
-                urlRequest.timeoutInterval = 10
+                urlRequest.timeoutInterval = 5
 
                 URLSession.shared.dataTask(with: urlRequest) { data, response, error in
                     if let error = error {

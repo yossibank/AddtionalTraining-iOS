@@ -20,6 +20,20 @@ struct StringResources {
         static var login: String { Internal.localizable.login() }
     }
 
+    struct Alert {
+        static var close: String { Internal.localizable.close() }
+        static var okay: String { Internal.localizable.ok() }
+        static var error: String { Internal.localizable.error() }
+    }
+
+    struct Error {
+        static var unknownError: String { Internal.localizable.unknown_error() }
+        static var forbiddenError: String { Internal.localizable.forbidden_error() }
+        static var notFoundError: String { Internal.localizable.not_found_url_error() }
+        static var serverError: String { Internal.localizable.server_error() }
+        static var checkYourInput: String { Internal.localizable.please_check_your_input() }
+    }
+
     struct Validation {
         private static let minimumLength = "6"
 
