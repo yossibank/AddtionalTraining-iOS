@@ -63,6 +63,20 @@ extension SignupViewController {
                 self.validatePasswordLabel.text = (validationText ?? .blank).isEmpty ? .blank : validationText
             }
             .store(in: &cancellables)
+
+        passwordTextField.textDidChnagePublisher
+            .combineLatest(confimPasswordTextField.textDidChnagePublisher)
+            .debounce(for: 0.5, scheduler: RunLoop.main)
+            .sink { [weak self] passwordText, confirmPasswordText in
+                guard let self = self else { return }
+
+                let validationText = passwordText == confirmPasswordText
+                    ? .blank
+                    : Resources.Strings.Validation.notMatchingPassword
+
+                self.validateConfirmPasswordLabel.text = validationText
+            }
+            .store(in: &cancellables)
     }
 }
 

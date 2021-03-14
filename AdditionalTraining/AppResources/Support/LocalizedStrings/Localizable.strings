@@ -18,3 +18,4 @@
 "not_filled" = "%@が入力されていません";
 "not_correct_email_format" = "メールアドレスが正しいフォームで入力されていません";
 "not_length_password" = "パスワードは%@文字以上でご入力ください";
+"not_matching_password" = "パスワードと一致しません";

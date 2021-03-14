@@ -26,5 +26,6 @@ struct StringResources {
         static var emptyPassword: String { Internal.localizable.not_filled(Resources.Strings.App.password) }
         static var invalidEmailFormat: String { Internal.localizable.not_correct_email_format() }
         static var invalidLengthPassword: String { Internal.localizable.not_length_password(minimumLength) }
+        static var notMatchingPassword: String { Internal.localizable.not_matching_password() }
     }
 }

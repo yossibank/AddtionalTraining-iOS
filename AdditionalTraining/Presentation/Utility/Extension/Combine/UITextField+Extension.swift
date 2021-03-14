@@ -10,7 +10,7 @@ import Combine
 
 extension UITextField {
 
-    var textDidChnagePublisher: AnyPublisher<String?, Never> {
+    var textDidChnagePublisher: AnyPublisher<String, Never> {
         NotificationCenter
             .default
             .publisher(
@@ -18,7 +18,7 @@ extension UITextField {
                 object: self
             )
             .compactMap { $0.object as? UITextField }
-            .map { $0.text }
+            .map { $0.text ?? .blank }
             .removeDuplicates()
             .eraseToAnyPublisher()
     }
