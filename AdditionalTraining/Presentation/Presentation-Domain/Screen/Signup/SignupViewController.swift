@@ -33,7 +33,9 @@ final class SignupViewController: UIViewController {
     }
 
     @IBAction private func showBookListScreen(_ sender: Any) {
-        
+        if viewModel.isValidate() {
+            viewModel.signup()
+        }
     }
 
     @IBAction private func showLoginScreen(_ sender: Any) {

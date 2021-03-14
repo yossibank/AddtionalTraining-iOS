@@ -25,6 +25,8 @@ final class SignupViewModel {
         ConfirmPasswordValidator.validate(password, confirmPassword).errorDescription
     }
 
+    private var cancellables: Set<AnyCancellable> = .init()
+
     func isValidate() -> Bool {
         let results = [
             EmailValidator.validate(email).isValid,
@@ -39,5 +41,21 @@ final class SignupViewModel {
             && validationEmailText == nil
             && validationPasswordText == nil
             && validationConfirmPasswordText == nil
+    }
+
+    func signup() {
+        SignupRequest()
+            .request(.init(email: email, password: password))
+            .sink(receiveCompletion: { result in
+                switch result {
+                case .finished:
+                    print("OK")
+                case .failure(let error):
+                    print("ERROR: \(error.desciption())")
+                }
+            }, receiveValue: { response in
+                print(response.result)
+            })
+            .store(in: &cancellables)
     }
 }
