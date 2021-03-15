@@ -22,10 +22,10 @@ final class LoginViewController: UIViewController {
 
     private let router: RouterProtocol = Router()
 
-    private var isEnabledButton: Bool = false {
+    private var isEnabled: Bool = false {
         didSet {
-            loginButton.alpha = isEnabledButton ? 1.0 : 0.5
-            loginButton.isEnabled = isEnabledButton
+            loginButton.alpha = isEnabled ? 1.0 : 0.5
+            loginButton.isEnabled = isEnabled
         }
     }
 
@@ -72,7 +72,7 @@ extension LoginViewController {
 
     private func bindViewModel() {
         viewModel.isEnabledButton
-            .assign(to: \.isEnabledButton, on: self)
+            .assign(to: \.isEnabled, on: self)
             .store(in: &cancellables)
 
         viewModel.$email

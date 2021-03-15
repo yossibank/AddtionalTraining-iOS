@@ -24,6 +24,13 @@ final class SignupViewController: UIViewController {
 
     private let router: RouterProtocol = Router()
 
+    private var isEnabled: Bool = false {
+        didSet {
+            signupButton.alpha = isEnabled ? 1.0 : 0.5
+            signupButton.isEnabled = isEnabled
+        }
+    }
+
     private var viewModel: SignupViewModel!
     private var cancellables: Set<AnyCancellable> = .init()
 
@@ -71,46 +78,29 @@ extension SignupViewController {
     }
 
     private func bindViewModel() {
+        viewModel.isEnabledButton
+            .assign(to: \.isEnabled, on: self)
+            .store(in: &cancellables)
+
         viewModel.$email
             .debounce(for: 0.3, scheduler: RunLoop.main)
             .dropFirst()
-            .sink { [weak self] _ in
-                guard let self = self else { return }
-
-                self.validateEmailLabel.text = self.viewModel.validationEmailText
-            }
+            .map { _ in self.viewModel.validationEmailText }
+            .assign(to: \.text, on: validateEmailLabel)
             .store(in: &cancellables)
 
         viewModel.$password
             .debounce(for: 0.3, scheduler: RunLoop.main)
             .dropFirst()
-            .sink { [weak self] _ in
-                guard let self = self else { return }
-
-                self.validatePasswordLabel.text = self.viewModel.validationPasswordText
-            }
+            .map { _ in self.viewModel.validationPasswordText }
+            .assign(to: \.text, on: validatePasswordLabel)
             .store(in: &cancellables)
 
         viewModel.$confirmPassword
             .debounce(for: 0.3, scheduler: RunLoop.main)
             .dropFirst()
-            .sink { [weak self] _ in
-                guard let self = self else { return }
-
-                self.validateConfirmPasswordLabel.text = self.viewModel.validationConfirmPasswordText
-            }
-            .store(in: &cancellables)
-
-        Publishers
-            .CombineLatest3(viewModel.$email, viewModel.$password, viewModel.$confirmPassword)
-            .debounce(for: 0.3, scheduler: RunLoop.main)
-            .map { _ in self.viewModel.shouldEnabledButton() }
-            .sink { [weak self] isEnabled in
-                guard let self = self else { return }
-
-                self.signupButton.alpha = isEnabled ? 1.0 : 0.5
-                self.signupButton.isEnabled = isEnabled
-            }
+            .map { _ in self.viewModel.validationConfirmPasswordText }
+            .assign(to: \.text, on: validateConfirmPasswordLabel)
             .store(in: &cancellables)
 
         viewModel.$networkState

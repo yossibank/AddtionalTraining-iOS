@@ -5,6 +5,7 @@
 //  Created by KAMIYAMA YOSHIHITO on 2021/03/14.
 //
 
+import Foundation
 import Combine
 
 final class SignupViewModel {
@@ -28,6 +29,19 @@ final class SignupViewModel {
 
     private var cancellables: Set<AnyCancellable> = .init()
 
+    private(set) lazy var isEnabledButton = Publishers
+        .CombineLatest3($email, $password, $confirmPassword)
+        .receive(on: RunLoop.main)
+        .map { _ in self.shouldEnabledButton() }
+        .eraseToAnyPublisher()
+
+    private func shouldEnabledButton() -> Bool {
+        !(email.isEmpty || password.isEmpty || confirmPassword.isEmpty)
+            && validationEmailText == nil
+            && validationPasswordText == nil
+            && validationConfirmPasswordText == nil
+    }
+
     func isValidate() -> Bool {
         let results = [
             EmailValidator.validate(email).isValid,
@@ -35,13 +49,6 @@ final class SignupViewModel {
             ConfirmPasswordValidator.validate(password, confirmPassword).isValid
         ]
         return results.allSatisfy { $0 }
-    }
-
-    func shouldEnabledButton() -> Bool {
-        !(email.isEmpty || password.isEmpty || confirmPassword.isEmpty)
-            && validationEmailText == nil
-            && validationPasswordText == nil
-            && validationConfirmPasswordText == nil
     }
 
     func signup() {
