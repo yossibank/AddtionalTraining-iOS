@@ -22,6 +22,8 @@ final class LoginViewModel {
         PasswordValidator.validate(password).errorDescription
     }
 
+    private let repository: LoginRepository
+
     private var cancellables: Set<AnyCancellable> = .init()
 
     private(set) lazy var isEnabledButton = Publishers
@@ -30,25 +32,15 @@ final class LoginViewModel {
         .map { _ in self.shouldEnabledButton() }
         .eraseToAnyPublisher()
 
-    private func shouldEnabledButton() -> Bool {
-        !(email.isEmpty || password.isEmpty)
-            && validationEmailText == nil
-            && validationPasswordText == nil
-    }
-
-    func isValidate() -> Bool {
-        let results = [
-            EmailValidator.validate(email).isValid,
-            PasswordValidator.validate(password).isValid
-        ]
-        return results.allSatisfy { $0 }
+    init(repository: LoginRepository) {
+        self.repository = repository
     }
 
     func login() {
         newWorkState = .loading
 
-        LoginRequest()
-            .request(.init(email: email, password: password))
+        repository
+            .login(email: email, password: password)
             .sink(receiveCompletion: { [weak self] result in
                 guard let self = self else { return }
 
@@ -65,5 +57,19 @@ final class LoginViewModel {
                 KeychainManager.shared.setToken(response.result.token)
             })
             .store(in: &cancellables)
+    }
+
+    func isValidate() -> Bool {
+        let results = [
+            EmailValidator.validate(email).isValid,
+            PasswordValidator.validate(password).isValid
+        ]
+        return results.allSatisfy { $0 }
+    }
+
+    private func shouldEnabledButton() -> Bool {
+        !(email.isEmpty || password.isEmpty)
+            && validationEmailText == nil
+            && validationPasswordText == nil
     }
 }

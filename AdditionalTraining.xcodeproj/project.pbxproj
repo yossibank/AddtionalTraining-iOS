@@ -51,6 +51,10 @@
 		78BCFD7B25F31565003618CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78BCFD7925F31565003618CE /* LaunchScreen.storyboard */; };
 		78BCFD8625F31565003618CE /* AddtionalTraining_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BCFD8525F31565003618CE /* AddtionalTraining_iOSTests.swift */; };
 		78BCFD9125F31565003618CE /* AddtionalTraining_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BCFD9025F31565003618CE /* AddtionalTraining_iOSUITests.swift */; };
+		78C2E69A25FF841C00275E0E /* SignupRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C2E69925FF841C00275E0E /* SignupRepository.swift */; };
+		78C2E69F25FF842300275E0E /* LoginRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C2E69E25FF842300275E0E /* LoginRepository.swift */; };
+		78C2E6A425FF846600275E0E /* LoginRespositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C2E6A325FF846600275E0E /* LoginRespositoryImpl.swift */; };
+		78C2E6AC25FF93CE00275E0E /* SignupRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C2E6AB25FF93CE00275E0E /* SignupRepositoryImpl.swift */; };
 		78DF93E225FCECE600C50A29 /* Stirng+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DF93E125FCECE600C50A29 /* Stirng+Util.swift */; };
 		78EBF08E25FC6BF200613185 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78EBF08D25FC6BF200613185 /* R.generated.swift */; };
 		BB421B46419B780D53B6688C /* Pods_AdditionalTraining_AdditionalTrainingUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC387CD9B089DBA9C8C27798 /* Pods_AdditionalTraining_AdditionalTrainingUITests.framework */; };
@@ -132,6 +136,10 @@
 		78BCFD8C25F31565003618CE /* AdditionalTrainingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AdditionalTrainingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		78BCFD9025F31565003618CE /* AddtionalTraining_iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddtionalTraining_iOSUITests.swift; sourceTree = "<group>"; };
 		78BCFD9225F31565003618CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		78C2E69925FF841C00275E0E /* SignupRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupRepository.swift; sourceTree = "<group>"; };
+		78C2E69E25FF842300275E0E /* LoginRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRepository.swift; sourceTree = "<group>"; };
+		78C2E6A325FF846600275E0E /* LoginRespositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRespositoryImpl.swift; sourceTree = "<group>"; };
+		78C2E6AB25FF93CE00275E0E /* SignupRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupRepositoryImpl.swift; sourceTree = "<group>"; };
 		78DF93E125FCECE600C50A29 /* Stirng+Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Stirng+Util.swift"; sourceTree = "<group>"; };
 		78EBF08D25FC6BF200613185 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		7CC887D33AB6819910BD8183 /* Pods-AdditionalTraining-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdditionalTraining-iOS.debug.xcconfig"; path = "Target Support Files/Pods-AdditionalTraining-iOS/Pods-AdditionalTraining-iOS.debug.xcconfig"; sourceTree = "<group>"; };
@@ -196,6 +204,7 @@
 		782CD9BB25FC6FC600DD468C /* Signup */ = {
 			isa = PBXGroup;
 			children = (
+				78C2E6AB25FF93CE00275E0E /* SignupRepositoryImpl.swift */,
 				787EF6BE25FE0820007B7054 /* SignupViewModel.swift */,
 				782CD9BD25FC6FF900DD468C /* SignupViewController.swift */,
 				782CD9C525FC700C00DD468C /* SignupViewController.storyboard */,
@@ -206,6 +215,7 @@
 		782CD9BC25FC6FD000DD468C /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				78C2E6A325FF846600275E0E /* LoginRespositoryImpl.swift */,
 				7848C3FD25FDF1B40066FD9B /* LoginViewModel.swift */,
 				782CD9DD25FC70FF00DD468C /* LoginViewController.swift */,
 				782CD9D825FC70B600DD468C /* LoginViewController.storyboard */,
@@ -359,6 +369,15 @@
 			path = AdditionalTrainingUITests;
 			sourceTree = "<group>";
 		};
+		78C2E69025FF78DC00275E0E /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				78C2E69925FF841C00275E0E /* SignupRepository.swift */,
+				78C2E69E25FF842300275E0E /* LoginRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
 		78CD3E5C25FE12BA00112FA9 /* Account */ = {
 			isa = PBXGroup;
 			children = (
@@ -448,6 +467,7 @@
 			isa = PBXGroup;
 			children = (
 				7848C3D125FDDD140066FD9B /* API */,
+				78C2E69025FF78DC00275E0E /* Repositories */,
 				788DC72E25FE5D9400940B80 /* Service */,
 			);
 			path = Data;
@@ -815,11 +835,14 @@
 			files = (
 				7848C3F925FDEFE80066FD9B /* LoginRequest.swift in Sources */,
 				7852FB4E25FCDE98000438CD /* UITextField+Extension.swift in Sources */,
+				78C2E6A425FF846600275E0E /* LoginRespositoryImpl.swift in Sources */,
 				7848C3E725FDE5200066FD9B /* AppConfigurator.swift in Sources */,
 				782CDA2325FC8E9F00DD468C /* MainNavigationController.swift in Sources */,
+				78C2E6AC25FF93CE00275E0E /* SignupRepositoryImpl.swift in Sources */,
 				782CDA0425FC827400DD468C /* IBDesignableTextField.swift in Sources */,
 				782CDA3025FC92C500DD468C /* Router.swift in Sources */,
 				787EF6BF25FE0821007B7054 /* SignupViewModel.swift in Sources */,
+				78C2E69F25FF842300275E0E /* LoginRepository.swift in Sources */,
 				7848C3D525FDDD4C0066FD9B /* HttpMethod.swift in Sources */,
 				7848C3F425FDEF970066FD9B /* LoginResponse.swift in Sources */,
 				78A9230F25FCAB5E00516F3A /* AppStrings.swift in Sources */,
@@ -844,6 +867,7 @@
 				7820639E25FE135200D67BDA /* SignupResponse.swift in Sources */,
 				782CD9DE25FC70FF00DD468C /* LoginViewController.swift in Sources */,
 				78A9231C25FCB0BD00516F3A /* KeyboardNotfier.swift in Sources */,
+				78C2E69A25FF841C00275E0E /* SignupRepository.swift in Sources */,
 				788DC73025FE5DA400940B80 /* KeychainManager.swift in Sources */,
 				788DC71F25FE4EEE00940B80 /* UIAlertController+Extension.swift in Sources */,
 				78A922FA25FCA97500516F3A /* NavigationBarConfiguration.swift in Sources */,

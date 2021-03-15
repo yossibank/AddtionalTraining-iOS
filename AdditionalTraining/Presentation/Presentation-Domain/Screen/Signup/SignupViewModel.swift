@@ -13,7 +13,7 @@ final class SignupViewModel {
     @Published var email: String = .blank
     @Published var password: String = .blank
     @Published var confirmPassword: String = .blank
-    @Published var networkState: NetworkState = .standby
+    @Published private(set) var networkState: NetworkState = .standby
 
     var validationEmailText: String? {
         EmailValidator.validate(email).errorDescription
@@ -27,6 +27,8 @@ final class SignupViewModel {
         ConfirmPasswordValidator.validate(password, confirmPassword).errorDescription
     }
 
+    private let repository: SignupRepository
+
     private var cancellables: Set<AnyCancellable> = .init()
 
     private(set) lazy var isEnabledButton = Publishers
@@ -35,27 +37,15 @@ final class SignupViewModel {
         .map { _ in self.shouldEnabledButton() }
         .eraseToAnyPublisher()
 
-    private func shouldEnabledButton() -> Bool {
-        !(email.isEmpty || password.isEmpty || confirmPassword.isEmpty)
-            && validationEmailText == nil
-            && validationPasswordText == nil
-            && validationConfirmPasswordText == nil
-    }
-
-    func isValidate() -> Bool {
-        let results = [
-            EmailValidator.validate(email).isValid,
-            PasswordValidator.validate(password).isValid,
-            ConfirmPasswordValidator.validate(password, confirmPassword).isValid
-        ]
-        return results.allSatisfy { $0 }
+    init(repository: SignupRepository) {
+        self.repository = repository
     }
 
     func signup() {
         networkState = .loading
 
-        SignupRequest()
-            .request(.init(email: email, password: password))
+        repository
+            .signup(email: email, password: password)
             .sink(receiveCompletion: { [weak self] result in
                 guard let self = self else { return }
 
@@ -72,5 +62,21 @@ final class SignupViewModel {
                 KeychainManager.shared.setToken(response.result.token)
             })
             .store(in: &cancellables)
+    }
+
+    func isValidate() -> Bool {
+        let results = [
+            EmailValidator.validate(email).isValid,
+            PasswordValidator.validate(password).isValid,
+            ConfirmPasswordValidator.validate(password, confirmPassword).isValid
+        ]
+        return results.allSatisfy { $0 }
+    }
+
+    private func shouldEnabledButton() -> Bool {
+        !(email.isEmpty || password.isEmpty || confirmPassword.isEmpty)
+            && validationEmailText == nil
+            && validationPasswordText == nil
+            && validationConfirmPasswordText == nil
     }
 }
