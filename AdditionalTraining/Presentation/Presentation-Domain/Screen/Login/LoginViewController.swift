@@ -22,6 +22,13 @@ final class LoginViewController: UIViewController {
 
     private let router: RouterProtocol = Router()
 
+    private var isEnabledButton: Bool = false {
+        didSet {
+            loginButton.alpha = isEnabledButton ? 1.0 : 0.5
+            loginButton.isEnabled = isEnabledButton
+        }
+    }
+
     private var viewModel: LoginViewModel!
     private var cancellables: Set<AnyCancellable> = .init()
 
@@ -64,36 +71,22 @@ extension LoginViewController {
     }
 
     private func bindViewModel() {
+        viewModel.isEnabledButton
+            .assign(to: \.isEnabledButton, on: self)
+            .store(in: &cancellables)
+
         viewModel.$email
             .debounce(for: 0.3, scheduler: RunLoop.main)
             .dropFirst()
-            .sink { [weak self] _ in
-                guard let self = self else { return }
-
-                self.validateEmailLabel.text = self.viewModel.validationEmailText
-            }
+            .map { _ in self.viewModel.validationEmailText }
+            .assign(to: \.text, on: validateEmailLabel)
             .store(in: &cancellables)
 
         viewModel.$password
             .debounce(for: 0.3, scheduler: RunLoop.main)
             .dropFirst()
-            .sink { [weak self] _ in
-                guard let self = self else { return }
-
-                self.validatePasswordLabel.text = self.viewModel.validationPasswordText
-            }
-            .store(in: &cancellables)
-
-        Publishers
-            .CombineLatest(viewModel.$email, viewModel.$password)
-            .debounce(for: 0.3, scheduler: RunLoop.main)
-            .map { _ in self.viewModel.shouldEnabledButton() }
-            .sink { [weak self] isEnabled in
-                guard let self = self else { return }
-
-                self.loginButton.alpha = isEnabled ? 1.0 : 0.5
-                self.loginButton.isEnabled = isEnabled
-            }
+            .map { _ in self.viewModel.validationPasswordText }
+            .assign(to: \.text, on: validatePasswordLabel)
             .store(in: &cancellables)
 
         viewModel.$newWorkState

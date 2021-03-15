@@ -5,6 +5,7 @@
 //  Created by KAMIYAMA YOSHIHITO on 2021/03/14.
 //
 
+import Foundation
 import Combine
 
 final class LoginViewModel {
@@ -23,18 +24,24 @@ final class LoginViewModel {
 
     private var cancellables: Set<AnyCancellable> = .init()
 
+    private(set) lazy var isEnabledButton = Publishers
+        .CombineLatest($email, $password)
+        .receive(on: RunLoop.main)
+        .map { _ in self.shouldEnabledButton() }
+        .eraseToAnyPublisher()
+
+    private func shouldEnabledButton() -> Bool {
+        !(email.isEmpty || password.isEmpty)
+            && validationEmailText == nil
+            && validationPasswordText == nil
+    }
+
     func isValidate() -> Bool {
         let results = [
             EmailValidator.validate(email).isValid,
             PasswordValidator.validate(password).isValid
         ]
         return results.allSatisfy { $0 }
-    }
-
-    func shouldEnabledButton() -> Bool {
-        !(email.isEmpty || password.isEmpty)
-            && validationEmailText == nil
-            && validationPasswordText == nil
     }
 
     func login() {
