@@ -13,7 +13,7 @@ final class SignupViewController: UIViewController {
     @IBOutlet private weak var stackView: UIStackView!
     @IBOutlet private weak var emailTextField: UITextField!
     @IBOutlet private weak var passwordTextField: UITextField!
-    @IBOutlet private weak var confimPasswordTextField: UITextField!
+    @IBOutlet private weak var confirmPasswordTextField: UITextField!
     @IBOutlet private weak var validateEmailLabel: UILabel!
     @IBOutlet private weak var validatePasswordLabel: UILabel!
     @IBOutlet private weak var validateConfirmPasswordLabel: UILabel!
@@ -53,8 +53,19 @@ final class SignupViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         listenerKeyboard(keyboardNotifier: keyboardNotifier)
+        setupTextField()
         bindValue()
         bindViewModel()
+    }
+
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
+    }
+
+    private func setupTextField() {
+        [emailTextField, passwordTextField, confirmPasswordTextField].forEach {
+            $0?.delegate = self
+        }
     }
 }
 
@@ -71,7 +82,7 @@ extension SignupViewController {
             .assign(to: \.password, on: viewModel)
             .store(in: &cancellables)
 
-        confimPasswordTextField.textDidChnagePublisher
+        confirmPasswordTextField.textDidChnagePublisher
             .receive(on: RunLoop.main)
             .assign(to: \.confirmPassword, on: viewModel)
             .store(in: &cancellables)
@@ -129,13 +140,24 @@ extension SignupViewController {
     }
 }
 
-extension SignupViewController {
+extension SignupViewController: UITextFieldDelegate {
 
-    override func touchesBegan(
-        _ touches: Set<UITouch>,
-        with event: UIEvent?
-    ) {
-        view.endEditing(true)
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        let textFields = [emailTextField, passwordTextField, confirmPasswordTextField]
+
+        guard
+            let currentTextFieldIndex = textFields.firstIndex(of: textField)
+        else {
+            return false
+        }
+
+        if currentTextFieldIndex + 1 == textFields.endIndex {
+            textField.resignFirstResponder()
+        } else {
+            textFields[currentTextFieldIndex + 1]?.becomeFirstResponder()
+        }
+
+        return true
     }
 }
 

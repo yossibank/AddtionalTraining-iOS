@@ -138,7 +138,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="confimPasswordTextField" destination="VoQ-0o-v35" id="T0I-XX-3Hj"/>
+                        <outlet property="confirmPasswordTextField" destination="VoQ-0o-v35" id="T2B-Cf-1hw"/>
                         <outlet property="emailTextField" destination="gFE-IZ-9RE" id="WIg-rg-osc"/>
                         <outlet property="loadingIndicator" destination="Eej-iR-s8c" id="rsM-K1-bL7"/>
                         <outlet property="passwordTextField" destination="XVI-e9-QoI" id="vSB-aX-eQi"/>
