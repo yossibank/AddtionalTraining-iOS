@@ -13,10 +13,10 @@ extension UIViewController {
 
         var message: String
 
-        message = (error as? APIError)?.errorDescription ?? Resources.Strings.Error.unknownError
-
         if let apiError = error as? APIError, case .httpError(let httpCode) = apiError {
             message = apiError.httpCodeErrorMessage(httpCode: httpCode)
+        } else {
+            message = (error as? APIError)?.errorDescription ?? Resources.Strings.Error.unknownError
         }
 
         let alert = UIAlertController.okAlert(
